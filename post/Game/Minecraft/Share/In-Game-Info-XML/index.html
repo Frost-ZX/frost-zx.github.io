@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<title>「Minecraft」In-Game Info XML 样式 &middot; Frost-ZX</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="author" content="Frost-ZX">
+
+    <meta name="description" content="Frost-ZX 的博客">
+
+
+<link rel="canonical" href="/post/Game/Minecraft/Share/In-Game-Info-XML/"/>
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+<link rel="stylesheet" href="/files/css/style.css">
+<link rel="stylesheet" href="/files/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/files/fancybox/jquery.fancybox.css">
+
+    <link rel="stylesheet" href="/files/highlight/styles/nord.css">
+
+<meta property="og:title" content="「Minecraft」In-Game Info XML 样式" />
+<meta property="og:description" content="
+模组：In-Game Info XML
+前置：Lunatrius Core
+游戏版本：Minecraft Java Edition 正式版 1.12.2
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/Game/Minecraft/Share/In-Game-Info-XML/" />
+<meta property="article:published_time" content="2019-08-29T18:00:00+08:00" />
+<meta property="article:modified_time" content="2019-08-29T18:00:00+08:00" />
+
+
+<meta itemprop="name" content="「Minecraft」In-Game Info XML 样式">
+<meta itemprop="description" content="
+模组：In-Game Info XML
+前置：Lunatrius Core
+游戏版本：Minecraft Java Edition 正式版 1.12.2
+">
+
+
+<meta itemprop="datePublished" content="2019-08-29T18:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-08-29T18:00:00&#43;08:00" />
+<meta itemprop="wordCount" content="563">
+
+
+
+<meta itemprop="keywords" content="Minecraft,代码,分享,模组," />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="「Minecraft」In-Game Info XML 样式"/>
+<meta name="twitter:description" content="
+模组：In-Game Info XML
+前置：Lunatrius Core
+游戏版本：Minecraft Java Edition 正式版 1.12.2
+"/>
+<meta name="twitter:site" content="@Frost-ZX"/>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="" id="logo">
+        
+        <span class="site-title">Frost-ZX</span>
+      </a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          
+        
+          
+        
+        
+          <a class="main-nav-link" href="/page/about/">关于</a>
+        
+        
+          
+        
+          <a class="main-nav-link" href="/tags/">标签</a>
+        
+          <a class="main-nav-link" href="/categories/">分类</a>
+        
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="/files/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+        <tr>
+          
+            <td><a class="main-nav-link" href="/">主页</a></td>
+          
+            
+          
+            
+          
+          <td><a class="main-nav-link" href="/page/about/">关于</a></td>
+          
+            
+          
+            <td><a class="main-nav-link" href="/tags/">标签</a></td>
+          
+            <td><a class="main-nav-link" href="/categories/">分类</a></td>
+          
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="/files/css/images/avatar.png">
+      
+      <h2 id="name">Frost-ZX</h2>
+      
+      <span id="location"><i class="fa fa-map-marker"></i>中国</span>
+      
+          <a id="follow" href="//space.bilibili.com/936757" target="_blank" title="在 bilibili 关注我">
+              关注
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        8
+        <span>内容</span>
+      </div>
+      <div class="article-info-block">
+        
+          14
+        
+        <span>标签</span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+        
+<td><a href="//github.com/Frost-ZX" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//youtube.com/Frost-ZX" target="_blank" title="YouTube"><i class="fa fa-youtube"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//twitter.com/Frost-ZX" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+        
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+    
+
+    <section id="main">
+    
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+
+        <header class="article-header">
+    <a href="/post/Game/Minecraft/Share/In-Game-Info-XML/">
+    <h1 class="article-title" itemprop="name">
+        「Minecraft」In-Game Info XML 样式
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2019-08-29 18:00:00 &#43;0800 CST" itemprop="datePublished">2019-08-29</time>
+            
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="/categories/%E6%B8%B8%E6%88%8F">游戏</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="/tags/minecraft">Minecraft</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="/tags/%E4%BB%A3%E7%A0%81">代码</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="/tags/%E5%88%86%E4%BA%AB">分享</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="/tags/%E6%A8%A1%E7%BB%84">模组</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <blockquote>
+<p><strong>模组：</strong><a href="https://www.curseforge.com/minecraft/mc-mods/ingame-info-xml">In-Game Info XML</a><br />
+<strong>前置：</strong><a href="https://www.curseforge.com/minecraft/mc-mods/lunatriuscore">Lunatrius Core</a><br />
+<strong>游戏版本：</strong>Minecraft Java Edition 正式版 1.12.2</p>
+</blockquote>
+
+<h2 id="说明">说明</h2>
+
+<p>分享一下自己在用的 In-Game Info XML Mod 的样式。</p>
+
+<h2 id="使用方法">使用方法</h2>
+
+<h4 id="方法一">方法一</h4>
+
+<ol>
+<li>把代码保存为 <code>InGameInfo.xml</code> 文件（编码 <code>UTF-8</code>），放入 <code>.minecraft/config/</code> 文件夹。</li>
+<li>启动游戏或直接在游戏中执行命令 <code>/igi reload</code> 进行加载。</li>
+</ol>
+
+<h4 id="方法二">方法二</h4>
+
+<ol>
+<li>把代码保存为 <code>文件名.xml</code> 文件（文件名自定义；编码 <code>UTF-8</code>），放入 <code>.minecraft/config/</code> 文件夹。</li>
+<li>在游戏中执行命令 <code>/igi load 文件名.xml</code>（<code>文件名</code> 是第 1 步中自己修改的文件名）进行加载。</li>
+</ol>
+
+<h2 id="效果图">效果图</h2>
+
+<p><img src="https://file.frozenstudio.top/Picture/Minecraft/Mod_InGameInfoXML/01.png" alt="01" />
+<img src="https://file.frozenstudio.top/Picture/Minecraft/Mod_InGameInfoXML/02.png" alt="02" />
+<img src="https://file.frozenstudio.top/Picture/Minecraft/Mod_InGameInfoXML/03.png" alt="03" />
+<img src="https://file.frozenstudio.top/Picture/Minecraft/Mod_InGameInfoXML/04.png" alt="04" />
+<img src="https://file.frozenstudio.top/Picture/Minecraft/Mod_InGameInfoXML/05.png" alt="05" />
+<img src="https://file.frozenstudio.top/Picture/Minecraft/Mod_InGameInfoXML/06.png" alt="06" /></p>
+
+<h2 id="代码">代码</h2>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;!-- 样式作者：Frost-ZX bilibili UID 936757 --&gt;
+&lt;config&gt;
+    &lt;lines at=&quot;topleft&quot;&gt;
+        &lt;line&gt;
+            &lt;str&gt;$l天数: $b{day}$r $l时间: $b{mctime24} &lt;/str&gt;
+            &lt;if&gt;
+                &lt;var&gt;daytime&lt;/var&gt;
+                &lt;str&gt;$e日$r &lt;/str&gt;
+                &lt;str&gt;$8夜$r $e$l☾ {moonphase}$r &lt;/str&gt;
+            &lt;/if&gt;
+            &lt;if&gt;
+                &lt;var&gt;raining&lt;/var&gt;
+                &lt;str&gt;$b☔$r &lt;/str&gt;
+            &lt;/if&gt;
+            &lt;if&gt;
+                &lt;var&gt;thundering&lt;/var&gt;
+                &lt;str&gt;$b⚡$r &lt;/str&gt;
+            &lt;/if&gt;
+            &lt;if&gt;
+                &lt;var&gt;snowing&lt;/var&gt;
+                &lt;str&gt;$b❄$r &lt;/str&gt;
+            &lt;/if&gt;
+            &lt;op&gt;
+                &lt;str&gt;NE&lt;/str&gt;
+                &lt;var&gt;nextweatherchange&lt;/var&gt;
+                &lt;num&gt;?&lt;/num&gt;
+                &lt;str&gt;$l天气切换: $a{nextweatherchange}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/op&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;str&gt;$l生态群系: $a{biome} $r(温: $b{temperature} $r湿: $b{humidity}$r)&lt;/str&gt;
+            &lt;if&gt;
+                &lt;var&gt;slimechunk&lt;/var&gt;
+                &lt;str&gt; $a史莱姆区块 &lt;/str&gt;
+            &lt;/if&gt;
+            &lt;if&gt;
+                &lt;var&gt;slimes&lt;/var&gt;
+                &lt;str&gt;(可生成)$f&lt;/str&gt;
+            &lt;/if&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;str&gt;$l现实时间: $a{rltime24}&lt;/str&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;str&gt;$l生命: $c{health} $r/ $c{maxhealth}$r $l移动速度: $e{speed}&lt;/str&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;str&gt;$l等级: $bLv.{playerlevel} $e{xpthislevel}$f / $e{xpcap}$f ($e&lt;/str&gt;
+            &lt;round&gt;
+                &lt;pct&gt;
+                    &lt;var&gt;xpthislevel&lt;/var&gt;
+                    &lt;var&gt;xpcap&lt;/var&gt;
+                &lt;/pct&gt;
+                &lt;num&gt;0&lt;/num&gt;
+            &lt;/round&gt;
+            &lt;str&gt;%$f)$r &lt;/str&gt;
+            &lt;str&gt;$l分数: $6{score}&lt;/str&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;str&gt;$l亮度: &lt;/str&gt;
+            &lt;max&gt;
+                &lt;var&gt;light&lt;/var&gt;
+                &lt;num&gt;7.5&lt;/num&gt;
+                &lt;str&gt;$e&lt;/str&gt;
+                &lt;str&gt;$c&lt;/str&gt;
+            &lt;/max&gt;
+            &lt;var&gt;light&lt;/var&gt;
+            &lt;str&gt;$r (视野: &lt;/str&gt;
+            &lt;max&gt;
+                &lt;var&gt;lighteye&lt;/var&gt;
+                &lt;num&gt;7.5&lt;/num&gt;
+                &lt;str&gt;$e&lt;/str&gt;
+                &lt;str&gt;$c&lt;/str&gt;
+            &lt;/max&gt;
+            &lt;var&gt;lighteye&lt;/var&gt;
+            &lt;str&gt;$r) &lt;/str&gt;
+        &lt;str&gt;$lFPS: &lt;/str&gt;
+        &lt;op&gt;
+            &lt;str&gt;GT&lt;/str&gt;
+            &lt;var&gt;fps&lt;/var&gt;
+            &lt;num&gt;60&lt;/num&gt;
+            &lt;num&gt;45&lt;/num&gt;
+            &lt;num&gt;30&lt;/num&gt;
+            &lt;num&gt;15&lt;/num&gt;
+            &lt;num&gt;0&lt;/num&gt;
+            &lt;str&gt;$a&lt;/str&gt;
+            &lt;str&gt;$e&lt;/str&gt;
+            &lt;str&gt;$6&lt;/str&gt;
+            &lt;str&gt;$c&lt;/str&gt;
+            &lt;str&gt;$4&lt;/str&gt;
+            &lt;str&gt;&lt;/str&gt;
+        &lt;/op&gt;
+        &lt;var&gt;fps&lt;/var&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;str&gt; &lt;/str&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;mouseoverid&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;$l信息&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;mouseoverid&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;$e{mouseovername}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;mouseoverid&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;$a{mouseoveruniquename} $b{mouseoverid}:{mouseovermetadata}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;mouseoverpowerinput&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;$eMin: $7{mouseoverpowerweak} $aMax: $7{mouseoverpowerstrong} $bInput: $7{mouseoverpowerinput}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+    &lt;/lines&gt;
+    &lt;lines at=&quot;topcenter&quot;&gt;
+        &lt;line&gt;
+            &lt;str&gt;{xi} {yi} {zi} (&lt;/str&gt;
+            &lt;op&gt;
+                &lt;str&gt;EQ&lt;/str&gt;
+                &lt;var&gt;abrfinedirection&lt;/var&gt;
+                &lt;num&gt;N&lt;/num&gt;
+                &lt;num&gt;NE&lt;/num&gt;
+                &lt;num&gt;E&lt;/num&gt;
+                &lt;num&gt;SE&lt;/num&gt;
+                &lt;num&gt;S&lt;/num&gt;
+                &lt;num&gt;SW&lt;/num&gt;
+                &lt;num&gt;W&lt;/num&gt;
+                &lt;num&gt;NW&lt;/num&gt;
+                &lt;str&gt;北&lt;/str&gt;
+                &lt;str&gt;东北&lt;/str&gt;
+                &lt;str&gt;东&lt;/str&gt;
+                &lt;str&gt;东南&lt;/str&gt;
+                &lt;str&gt;南&lt;/str&gt;
+                &lt;str&gt;西南&lt;/str&gt;
+                &lt;str&gt;西&lt;/str&gt;
+                &lt;str&gt;西北&lt;/str&gt;
+                &lt;str&gt;未知&lt;/str&gt;
+            &lt;/op&gt;
+            &lt;str&gt;)&lt;/str&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;min&gt;
+                &lt;var&gt;speed&lt;/var&gt;
+                &lt;num&gt;1&lt;/num&gt;
+                &lt;str&gt;区块 ({chunkx}, {chunkz}) {axisdirection}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/min&gt;
+        &lt;/line&gt;
+    &lt;/lines&gt;
+    &lt;lines at=&quot;bottomright&quot;&gt;
+        &lt;line&gt;
+            &lt;var&gt;mainhandicon&lt;/var&gt;
+            &lt;str&gt; &lt;/str&gt;
+            &lt;op&gt;
+                &lt;str&gt;GE&lt;/str&gt;
+                &lt;pct&gt;
+                    &lt;var&gt;mainhanddamageleft&lt;/var&gt;
+                    &lt;var&gt;mainhandmaxdamage&lt;/var&gt;
+                &lt;/pct&gt;
+                &lt;num&gt;50&lt;/num&gt;
+                &lt;num&gt;20&lt;/num&gt;
+                &lt;num&gt;10&lt;/num&gt;
+                &lt;num&gt;0&lt;/num&gt;
+                &lt;str&gt;$e&lt;/str&gt;
+                &lt;str&gt;$6&lt;/str&gt;
+                &lt;str&gt;$c&lt;/str&gt;
+                &lt;str&gt;$4&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/op&gt;
+            &lt;max&gt;
+                &lt;var&gt;mainhanddamageleft&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;{mainhanddamageleft}$f / $e{mainhandmaxdamage}&lt;/str&gt;
+                &lt;var&gt;mainhandname&lt;/var&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;str&gt; &lt;/str&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;potiondurationticks0&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;{potionduration0} {potionicon0}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;potiondurationticks1&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;{potionduration1} {potionicon1}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;potiondurationticks2&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;{potionduration2} {potionicon2}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;potiondurationticks3&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;{potionduration3} {potionicon3}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;potiondurationticks4&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;{potionduration4} {potionicon4}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;potiondurationticks5&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;{potionduration5} {potionicon5}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;potiondurationticks6&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;{potionduration6} {potionicon6}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;potiondurationticks7&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;{potionduration7} {potionicon7}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;potiondurationticks8&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;{potionduration8} {potionicon8}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;str&gt; &lt;/str&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;op&gt;
+                &lt;str&gt;GE&lt;/str&gt;
+                &lt;pct&gt;
+                    &lt;var&gt;helmetdamageleft&lt;/var&gt;
+                    &lt;var&gt;helmetmaxdamage&lt;/var&gt;
+                &lt;/pct&gt;
+                &lt;num&gt;50&lt;/num&gt;
+                &lt;num&gt;20&lt;/num&gt;
+                &lt;num&gt;10&lt;/num&gt;
+                &lt;str&gt;$e&lt;/str&gt;
+                &lt;str&gt;$6&lt;/str&gt;
+                &lt;str&gt;$c&lt;/str&gt;
+                &lt;str&gt;$4&lt;/str&gt;
+            &lt;/op&gt;
+            &lt;max&gt;
+                &lt;var&gt;helmetdamageleft&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;{helmetdamageleft}$f / $e{helmetmaxdamage}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+            &lt;str&gt; {helmeticon}&lt;/str&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;op&gt;
+                &lt;str&gt;GE&lt;/str&gt;
+                &lt;pct&gt;
+                    &lt;var&gt;chestplatedamageleft&lt;/var&gt;
+                    &lt;var&gt;chestplatemaxdamage&lt;/var&gt;
+                &lt;/pct&gt;
+                &lt;num&gt;50&lt;/num&gt;
+                &lt;num&gt;20&lt;/num&gt;
+                &lt;num&gt;10&lt;/num&gt;
+                &lt;str&gt;$e&lt;/str&gt;
+                &lt;str&gt;$6&lt;/str&gt;
+                &lt;str&gt;$c&lt;/str&gt;
+                &lt;str&gt;$4&lt;/str&gt;
+            &lt;/op&gt;
+            &lt;max&gt;
+                &lt;var&gt;chestplatedamageleft&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;{chestplatedamageleft}$f / $e{chestplatemaxdamage}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+            &lt;str&gt; {chestplateicon}&lt;/str&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;op&gt;
+                &lt;str&gt;GE&lt;/str&gt;
+                &lt;pct&gt;
+                    &lt;var&gt;leggingsdamageleft&lt;/var&gt;
+                    &lt;var&gt;leggingsmaxdamage&lt;/var&gt;
+                &lt;/pct&gt;
+                &lt;num&gt;50&lt;/num&gt;
+                &lt;num&gt;20&lt;/num&gt;
+                &lt;num&gt;10&lt;/num&gt;
+                &lt;str&gt;$e&lt;/str&gt;
+                &lt;str&gt;$6&lt;/str&gt;
+                &lt;str&gt;$c&lt;/str&gt;
+                &lt;str&gt;$4&lt;/str&gt;
+            &lt;/op&gt;
+            &lt;max&gt;
+                &lt;var&gt;leggingsdamageleft&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;{leggingsdamageleft}$f / $e{leggingsmaxdamage}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+            &lt;str&gt; {leggingsicon}&lt;/str&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;op&gt;
+                &lt;str&gt;GE&lt;/str&gt;
+                &lt;pct&gt;
+                    &lt;var&gt;bootsdamageleft&lt;/var&gt;
+                    &lt;var&gt;bootsmaxdamage&lt;/var&gt;
+                &lt;/pct&gt;
+                &lt;num&gt;50&lt;/num&gt;
+                &lt;num&gt;20&lt;/num&gt;
+                &lt;num&gt;10&lt;/num&gt;
+                &lt;str&gt;$e&lt;/str&gt;
+                &lt;str&gt;$6&lt;/str&gt;
+                &lt;str&gt;$c&lt;/str&gt;
+                &lt;str&gt;$4&lt;/str&gt;
+            &lt;/op&gt;
+            &lt;max&gt;
+                &lt;var&gt;bootsdamageleft&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;{bootsdamageleft}$f / $e{bootsmaxdamage}&lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+            &lt;str&gt; {bootsicon}&lt;/str&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;str&gt; &lt;/str&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;nearbyplayerdistance0&lt;/var&gt;
+                &lt;num&gt;0&lt;/num&gt;
+                &lt;str&gt;{nearbyplayericon0} {nearbyplayername0} {nearbyplayerdistance0} Blocks &lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;nearbyplayerdistance1&lt;/var&gt;
+                &lt;num&gt;0&lt;/num&gt;
+                &lt;str&gt;{nearbyplayericon1} {nearbyplayername1} {nearbyplayerdistance1} Blocks &lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;nearbyplayerdistance2&lt;/var&gt;
+                &lt;num&gt;0&lt;/num&gt;
+                &lt;str&gt;{nearbyplayericon2} {nearbyplayername2} {nearbyplayerdistance2} Blocks &lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;nearbyplayerdistance3&lt;/var&gt;
+                &lt;num&gt;0&lt;/num&gt;
+                &lt;str&gt;{nearbyplayericon3} {nearbyplayername3} {nearbyplayerdistance3} Blocks &lt;/str&gt;
+                &lt;str&gt;&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;str&gt; &lt;/str&gt;
+        &lt;/line&gt;
+        &lt;line&gt;
+            &lt;max&gt;
+                &lt;var&gt;ping&lt;/var&gt;
+                &lt;num&gt;0.5&lt;/num&gt;
+                &lt;str&gt;{ping}ms {pingicon}&lt;/str&gt;
+                &lt;str&gt;检测中...&lt;/str&gt;
+            &lt;/max&gt;
+        &lt;/line&gt;
+    &lt;/lines&gt;
+&lt;/config&gt;
+</code></pre>
+        </div>
+        <footer class="article-footer">
+    
+</footer>
+
+    </div>
+
+    
+<nav id="article-nav">
+    
+    <a href="/post/Game/Minecraft/Share/DynmapForge-WarsFtbDynmap-Fix/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          上一篇
+      </strong>
+      <div class="article-nav-title">修改 DynmapForge 的 index.html 和 markers.js 让 WarsFtbDynmap 能使用</div>
+    </a>
+    
+
+    
+</nav>
+
+
+</article>
+
+
+
+    </section>
+
+   	
+    	<aside id="sidebar">
+    
+
+    
+
+    
+
+    
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 | 由 <a href="//gohugo.io">Hugo</a> 强力驱动 | 主题修改自 <a href="//github.com/digitalcraftsman/hugo-icarus-theme">Icarus</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="/files/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/files/js/script.js"></script>
+
+
+<script src="/files/highlight/highlight.pack.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>
