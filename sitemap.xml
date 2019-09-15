@@ -143,13 +143,6 @@
   </url>
   
   <url>
-    <loc>/categories/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2019-01-01T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>/tags/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2019-01-01T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -157,7 +150,21 @@
   </url>
   
   <url>
+    <loc>/categories/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2019-01-01T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>/post/Test/Test/</loc>
+    <lastmod>2019-01-01T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/page/pages/</loc>
     <lastmod>2019-01-01T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -215,6 +222,20 @@
   <url>
     <loc>/post/Game/Minecraft/Knowledge/OP-Permission-Level/</loc>
     <lastmod>2018-07-02T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/post/Game/Minecraft/Tutorial/Fix-OfficialWebsite-Login/</loc>
+    <lastmod>2018-02-20T00:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2018-02-20T00:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

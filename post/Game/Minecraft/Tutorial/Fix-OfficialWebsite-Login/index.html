@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<title>使用 gooreplacer 插件解决国内在 Minecraft 官网不能登录的问题 &middot; Frost-ZX</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="author" content="Frost-ZX">
+
+    <meta name="description" content="Frost-ZX 的博客">
+
+
+<link rel="canonical" href="/post/Game/Minecraft/Tutorial/Fix-OfficialWebsite-Login/"/>
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/files/css/style.css">
+<link rel="stylesheet" href="/files/css/font-awesome.css">
+
+<link rel="stylesheet" href="/files/fancybox/jquery.fancybox.css">
+
+    <link rel="stylesheet" href="/files/highlight/styles/nord.css">
+
+<meta property="og:title" content="使用 gooreplacer 插件解决国内在 Minecraft 官网不能登录的问题" />
+<meta property="og:description" content="注意：在 2019 年 9 月以及之后，在国内已经可以直接登录。
+
+
+浏览器：Google Chrome
+其他 Chromium 内核的浏览器以及 Firefox 浏览器也可以使用本方法
+手机版的 Chrome 暂不支持安装扩展程序，如需使用请安装 Firefox
+扩展程序名称：gooreplacer
+扩展程序介绍：官网 GitHub
+扩展程序安装：Chrome Firefox
+相关链接：MCBBS
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/Game/Minecraft/Tutorial/Fix-OfficialWebsite-Login/" />
+<meta property="article:published_time" content="2018-02-20T00:00:00+08:00" />
+<meta property="article:modified_time" content="2018-02-20T00:00:00+08:00" />
+
+
+<meta itemprop="name" content="使用 gooreplacer 插件解决国内在 Minecraft 官网不能登录的问题">
+<meta itemprop="description" content="注意：在 2019 年 9 月以及之后，在国内已经可以直接登录。
+
+
+浏览器：Google Chrome
+其他 Chromium 内核的浏览器以及 Firefox 浏览器也可以使用本方法
+手机版的 Chrome 暂不支持安装扩展程序，如需使用请安装 Firefox
+扩展程序名称：gooreplacer
+扩展程序介绍：官网 GitHub
+扩展程序安装：Chrome Firefox
+相关链接：MCBBS
+">
+
+
+<meta itemprop="datePublished" content="2018-02-20T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2018-02-20T00:00:00&#43;08:00" />
+<meta itemprop="wordCount" content="91">
+
+
+
+<meta itemprop="keywords" content="Minecraft,教程," />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用 gooreplacer 插件解决国内在 Minecraft 官网不能登录的问题"/>
+<meta name="twitter:description" content="注意：在 2019 年 9 月以及之后，在国内已经可以直接登录。
+
+
+浏览器：Google Chrome
+其他 Chromium 内核的浏览器以及 Firefox 浏览器也可以使用本方法
+手机版的 Chrome 暂不支持安装扩展程序，如需使用请安装 Firefox
+扩展程序名称：gooreplacer
+扩展程序介绍：官网 GitHub
+扩展程序安装：Chrome Firefox
+相关链接：MCBBS
+"/>
+<meta name="twitter:site" content="@Frost_ZX"/>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="" id="logo">
+        
+        <span class="site-title">Frost-ZX</span>
+      </a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          
+        
+          
+        
+          
+        
+        
+          <a class="main-nav-link" href="/page/about/">关于</a>
+        
+        
+          
+        
+          <a class="main-nav-link" href="/tags/">标签</a>
+        
+          <a class="main-nav-link" href="/categories/">分类</a>
+        
+          <a class="main-nav-link" href="/page/pages/">页面</a>
+        
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="/files/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+        <tr>
+          
+            <td><a class="main-nav-link" href="/">主页</a></td>
+          
+            
+          
+            
+          
+            
+          
+          <td><a class="main-nav-link" href="/page/about/">关于</a></td>
+          
+            
+          
+            <td><a class="main-nav-link" href="/tags/">标签</a></td>
+          
+            <td><a class="main-nav-link" href="/categories/">分类</a></td>
+          
+            <td><a class="main-nav-link" href="/page/pages/">页面</a></td>
+          
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="/files/css/images/avatar.png">
+      
+      <h2 id="name">Frost-ZX</h2>
+      
+      <span id="location"><i class="fa fa-map-marker"></i>中国</span>
+      
+          <a id="follow" href="//space.bilibili.com/936757" target="_blank" title="在 bilibili 关注我">
+            关注
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        9<span>内容</span>
+      </div>
+      <div class="article-info-block">
+        
+          15
+        
+        <span>标签</span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table><tr><td><a href="//github.com/Frost-ZX" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+<td><a href="mailto:frost-zx@qq.com" target="_blank" title="邮箱"><i class="fa fa-envelope"></i></a></td>
+<td><a href="//steamcommunity.com/id/frost-zx/" target="_blank" title="Steam"><i class="fa fa-steam"></i></a></td>
+<td><a href="//twitter.com/Frost_ZX" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+<td><a href="//weibo.com/frostzx" target="_blank" title="新浪微博"><i class="fa fa-weibo"></i></a></td>
+</tr></table>
+      
+    </div>
+  </div>
+</aside>
+
+    
+
+    <section id="main">
+    
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+
+        <header class="article-header">
+    <a href="/post/Game/Minecraft/Tutorial/Fix-OfficialWebsite-Login/">
+    <h1 class="article-title" itemprop="name">
+        使用 gooreplacer 插件解决国内在 Minecraft 官网不能登录的问题
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-02-20 00:00:00 &#43;0800 CST" itemprop="datePublished">2018-02-20</time>
+            
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="/categories/%E6%B8%B8%E6%88%8F">游戏</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="/tags/Minecraft">Minecraft</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="/tags/%E6%95%99%E7%A8%8B">教程</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="注意-在-2019-年-9-月以及之后-在国内已经可以直接登录">注意：在 2019 年 9 月以及之后，在国内已经可以直接登录。</h2>
+
+<blockquote>
+<p><strong>浏览器：</strong>Google Chrome<br />
+其他 Chromium 内核的浏览器以及 Firefox 浏览器也可以使用本方法<br />
+手机版的 Chrome 暂不支持安装扩展程序，如需使用请安装 Firefox<br />
+<strong>扩展程序名称：</strong>gooreplacer<br />
+<strong>扩展程序介绍：</strong><a href="https://liujiacai.net/gooreplacer/">官网</a> <a href="https://github.com/jiacai2050/gooreplacer">GitHub</a><br />
+<strong>扩展程序安装：</strong><a href="https://chrome.google.com/webstore/detail/gooreplacer/jnlkjeecojckkigmchmfoigphmgkgbip">Chrome</a> <a href="https://addons.mozilla.org/zh-CN/firefox/addon/gooreplacer/">Firefox</a><br />
+<strong>相关链接：</strong><a href="https://www.mcbbs.net/thread-778175-1-1.html">MCBBS</a></p>
+</blockquote>
+
+<h2 id="前言">前言</h2>
+
+<p>Minecraft 国际版官网启用了 reCAPTCHA 验证码，由于其使用了 google.com 的域名，在中国大陆不能正常连接，导致点击“登录”按钮后没有任何的反应。<br />
+本方法通过扩展程序把 <code>www.google.com/recaptcha</code> 重定向为 <code>recaptcha.net/recaptcha</code>，使 Minecraft 国际版官网上的 reCAPTCHA 能被正常加载以登录。</p>
+
+<h2 id="安装扩展程序">安装扩展程序</h2>
+
+<h4 id="链接">链接</h4>
+
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/gooreplacer/jnlkjeecojckkigmchmfoigphmgkgbip">Chrome</a></li>
+<li><a href="https://addons.mozilla.org/zh-CN/firefox/addon/gooreplacer/">Firefox</a></li>
+</ul>
+
+<h4 id="注意">注意</h4>
+
+<p>由于 Chrome 网上应用商店使用了 google.com 的域名，所以一般情况下，在中国大陆也是不能访问的，你可能要通过以下的方法安装 gooreplacer 扩展程序（如果你使用的是 Firefox 浏览器，则可以直接安装）。</p>
+
+<ol>
+<li>进入 gooreplacer 扩展程序的 GitHub 页面（<a href="https://github.com/jiacai2050/gooreplacer">点击进入</a>）</li>
+<li>在 <code>安装</code> 部分找到 <code>此外，也可以直接下载本仓库的 crx 文件</code> ，点击 <a href="https://github.com/jiacai2050/gooreplacer/blob/master/gooreplacer.crx">crx 文件</a> 字段，然后在打开的页面中点击 <a href="https://github.com/jiacai2050/gooreplacer/raw/master/gooreplacer.crx">Download</a> 即可下载扩展程序文件（当然，你也可以直接点击这里的 <code>Download</code> 进行下载）
+<img src="https://file.frozenstudio.top/Picture/Tutorial/Minecraft_OfficialWebsite_Login/Download_crx.png" alt="Download_crx" /></li>
+<li>在 Chrome 中打开 <code>chrome://extensions/</code>，然后把刚刚下载的 <code>gooreplacer.crx</code> 文件拖到页面中，等待一会会弹出确认安装提示框，点击“添加扩展程序”然后稍等片刻就安装完成了</li>
+</ol>
+
+<h2 id="配置扩展程序">配置扩展程序</h2>
+
+<p>打开 gooreplacer 的 <code>选项</code>，根据下图进行设置即可。</p>
+
+<p><img src="https://file.frozenstudio.top/Picture/Tutorial/Minecraft_OfficialWebsite_Login/Extension_Settings.gif" alt="Extension_Settings" /></p>
+
+<pre><code class="language-plaintext">www.google.com/recaptcha
+recaptcha.net/recaptcha
+</code></pre>
+
+<h2 id="结束">结束</h2>
+
+<p>如果扩展程序安装无误且配置正确，你可以在 Minecraft 国际版官网的 <code>注册/登录</code> 页面的右下角看到 reCAPTCHA 的图标：</p>
+
+<p><img src="https://www.gstatic.cn/recaptcha/api2/logo_48.png" alt="reCAPTCHA" /></p>
+        </div>
+        <footer class="article-footer">
+    
+</footer>
+
+    </div>
+
+    
+<nav id="article-nav">
+    
+
+    
+    <a href="/post/Game/Minecraft/Knowledge/OP-Permission-Level/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          下一篇
+      </strong>
+      <div class="article-nav-title">「Minecraft」OP 权限等级</div>
+    </a>
+    
+</nav>
+
+
+</article>
+
+
+
+    </section>
+
+   	
+    	<aside id="sidebar">
+    
+
+    
+
+    
+
+    
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 | 由 <a href="//gohugo.io">Hugo</a> 强力驱动 | 主题修改自 <a href="//github.com/digitalcraftsman/hugo-icarus-theme">Icarus</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="/files/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/files/js/script.js"></script>
+
+
+<script src="/files/highlight/highlight.pack.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>
