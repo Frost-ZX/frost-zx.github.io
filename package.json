@@ -1,0 +1,45 @@
+{
+    "name": "frost-zx-blog",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve --mode development",
+        "serve-production": "vue-cli-service serve --mode production",
+        "serve-all": "vue-cli-service serve --mode development --host 0.0.0.0 ",
+        "serve-local": "vue-cli-service serve --mode development --host 127.0.0.1",
+        "build": "vue-cli-service build --mode production",
+        "build-modern": "vue-cli-service build --mode production --modern",
+        "lint-check": "vue-cli-service lint --no-fix",
+        "lint-fix": "vue-cli-service lint"
+    },
+    "dependencies": {
+        "@mdi/font": "^6.5.95",
+        "axios": "^0.26.0",
+        "buefy": "^0.9.17",
+        "core-js": "^3.8.3",
+        "github-markdown-css": "^5.1.0",
+        "highlight.js": "^11.4.0",
+        "markdown-it": "^12.3.2",
+        "ress": "^4.0.0",
+        "vue": "^2.6.14",
+        "vue-router": "^3.5.1",
+        "vuex": "^3.6.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.16",
+        "@babel/eslint-parser": "^7.12.16",
+        "@types/markdown-it": "^12.2.3",
+        "@vue/cli-plugin-babel": "~5.0.0",
+        "@vue/cli-plugin-eslint": "~5.0.0",
+        "@vue/cli-plugin-router": "~5.0.0",
+        "@vue/cli-plugin-vuex": "~5.0.0",
+        "@vue/cli-service": "~5.0.0",
+        "eslint": "^7.32.0",
+        "eslint-plugin-vue": "^8.0.3",
+        "less": "^4.0.0",
+        "less-loader": "^8.0.0",
+        "sass": "^1.32.7",
+        "sass-loader": "^12.0.0",
+        "vue-template-compiler": "^2.6.14"
+    }
+}
