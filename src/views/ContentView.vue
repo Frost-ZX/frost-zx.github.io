@@ -61,7 +61,7 @@
     </div>
 
     <!-- 内容区域 -->
-    <div class="content-wrapper">
+    <div ref="contentWrapper" class="content-wrapper">
 
       <!-- 文章主页 -->
       <template v-if="isIndex">
@@ -82,6 +82,9 @@
         />
       </template>
 
+      <!-- 返回顶部 -->
+      <to-top />
+
     </div>
 
   </div>
@@ -93,12 +96,14 @@ import { getContentFile } from '@/request/index';
 
 import ContentIndex from '@/components/ContentIndex';
 import MarkdownParser from '@/components/MarkdownParser';
+import ToTop from '@/components/ToTop';
 
 export default {
   name: 'ContentView',
   components: {
     ContentIndex,
     MarkdownParser,
+    ToTop,
   },
   data() {
     return {
