@@ -5,9 +5,11 @@ import axios from 'axios';
  * @type {Object.<string, (number|string|number[]|string[])}
  */
 
+const { appConfig = {} } = window; 
+
 const instance = axios.create({
     baseURL: '',
-    timeout: 10000,
+    timeout: (appConfig.httpTimeout || 10000),
     validateStatus: function (status) {
         return ((status >= 200 && status < 300) || status === 404);
     },
