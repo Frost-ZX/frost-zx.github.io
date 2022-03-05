@@ -40,6 +40,7 @@
             <!-- 内容项 -->
             <b-menu-item
               v-for="item in category.items"
+              v-show="!item.isHide"
               :key="item.name"
               :active="(
                 category.name === contentInfo.category && item.name === contentInfo.itemName
@@ -132,6 +133,7 @@ export default {
             title: '',
             createdAt: '',
             updatedAt: '',
+            isHide: true,
         }],
         isHide: true,
         isExpanded: false,
@@ -201,21 +203,31 @@ export default {
           return;
         }
 
+        // 获取分类信息
         const {
           name: categoryName,
           label: categoryLabel,
         } = category;
 
         category.items.forEach((item) => {
+
+          if (item.isHide) {
+            return;
+          }
+
+          // 设置文章信息
           item['categoryName'] = categoryName;
           item['categoryLabel'] = categoryLabel;
           item['itemName'] = item.name;
           item['itemLabel'] = item.title;
+
           result.push(item);
+
         });
 
       });
 
+      // 按创建日期倒序排序
       result.sort((a, b) => {
 
         const dateA = (a.createdAt || '');
