@@ -248,6 +248,16 @@ export default {
 
     /** 切换页面 */
     changePage(categoryName, itemName) {
+
+      /** @type {HTMLElement} */
+      const el = this.$refs['contentWrapper'];
+
+      if (el) {
+        el.scrollTop = 0;
+      } else {
+        console.warn('找不到 content-wrapper 元素。');
+      }
+
       this.$router.push({
         name: 'Content',
         params: {
@@ -255,6 +265,7 @@ export default {
           name: itemName,
         }
       });
+
     },
 
     /**
