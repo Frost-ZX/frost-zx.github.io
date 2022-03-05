@@ -125,7 +125,6 @@ export default {
   margin: 0 auto;
   padding: 2.5rem;
   box-sizing: border-box;
-  min-width: 12.5rem;
   max-width: 60rem;
   user-select: text;
 

@@ -61,12 +61,26 @@
 
     <!-- 内容区域 -->
     <div class="content-wrapper">
-      <markdown-parser :md-src="contentData" />
-      <b-loading
-        :active="isLoading"
-        :can-cancel="false"
-        :is-full-page="false"
-      ></b-loading>
+
+      <!-- 文章主页 -->
+      <template v-if="isIndex">
+        <content-index
+          :item-list="contentListAll"
+        />
+      </template>
+
+      <!-- 文章内容页 -->
+      <template v-else>
+        <markdown-parser
+          :md-src="contentData"
+        />
+        <b-loading
+          :active="isLoading"
+          :can-cancel="false"
+          :is-full-page="false"
+        />
+      </template>
+
     </div>
 
   </div>
@@ -76,15 +90,20 @@
 import { setTitle, toast } from '@/assets/js/utils';
 import { getContentFile } from '@/request/index';
 
+import ContentIndex from '@/components/ContentIndex';
 import MarkdownParser from '@/components/MarkdownParser';
 
 export default {
   name: 'ContentView',
   components: {
+    ContentIndex,
     MarkdownParser,
   },
   data() {
     return {
+
+      /** 是否为文章主页 */
+      isIndex: false,
 
       /** 是否正在载入内容 */
       isLoading: false,
@@ -105,20 +124,21 @@ export default {
       },
 
       /** 内容列表 */
-      contentList: [
-        {
-          name: '_index',
-          label: '索引页面',
-          isHide: true,
-          items: [{
-              name: 'contents',
-              title: '文章页面',
-              createdAt: '',
-              updatedAt: '',
-          }],
-          isExpanded: false,
-        },
-      ],
+      contentList: [{
+        name: '',
+        label: '',
+        items: [{
+            name: '',
+            title: '',
+            createdAt: '',
+            updatedAt: '',
+        }],
+        isHide: true,
+        isExpanded: false,
+      }],
+
+      /** 内容列表（全部） */
+      contentListAll: [],
 
     }
   },
@@ -152,6 +172,7 @@ export default {
         });
 
         this.contentList = listCurr;
+        this.initContentListAll();
 
       } else {
         toast({
@@ -166,12 +187,54 @@ export default {
 
     },
 
+    /** 初始化内容列表 */
+    initContentListAll() {
+
+      const src = this.contentList;
+
+      /** @type {{ createdAt: string }[]} */
+      const result = [];
+
+      src.forEach((category) => {
+
+        if (category.isHide) {
+          return;
+        }
+
+        const {
+          name: categoryName,
+          label: categoryLabel,
+        } = category;
+
+        category.items.forEach((item) => {
+          item['categoryName'] = categoryName;
+          item['categoryLabel'] = categoryLabel;
+          item['itemName'] = item.name;
+          item['itemLabel'] = item.title;
+          result.push(item);
+        });
+
+      });
+
+      result.sort((a, b) => {
+
+        const dateA = (a.createdAt || '');
+        const dateB = (b.createdAt || '');
+
+        return dateB.localeCompare(dateA, 'co');
+
+      });
+
+      this.contentListAll = result;
+
+    },
+
     /** 切换页面 */
-    changePage(category, itemName) {
+    changePage(categoryName, itemName) {
       this.$router.push({
         name: 'Content',
         params: {
-          category: category,
+          category: categoryName,
           name: itemName,
         }
       });
@@ -241,17 +304,20 @@ export default {
         params: routeParams,
       } = this.$route;
 
-      if (routeName === 'Content') {
+      const isContentPage = (routeName === 'Content');
+
+      if (isContentPage) {
         this.getContentFile({
           category: routeParams.category,
           itemName: routeParams.name,
         });
       } else {
-        this.getContentFile({
-          category: '_index',
-          itemName: 'contents',
+        this.updateContentInfo({
+          isIndex: true,
         });
       }
+
+      this.isIndex = !isContentPage;
 
     },
 
@@ -260,6 +326,7 @@ export default {
      * @param {object} options
      * @param {string} options.category 分类名称
      * @param {string} options.itemName 内容名称
+     * @param {boolean} [options.isIndex] 是否为文章主页
      */
     updateContentInfo(options) {
 
@@ -268,14 +335,28 @@ export default {
       const {
         category,
         itemName,
+        isIndex = false,
       } = options;
+
+      const { contentInfo, contentList } = this;
+
+      if (isIndex) {
+        setTitle('文章');
+        contentInfo.category = 'index';
+        contentInfo.createdAt = '2022-03-01';
+        contentInfo.updatedAt = '2022-03-05';
+        contentInfo.itemName = 'index';
+        contentInfo.itemtitle = '文章';
+        contentList.forEach((item) => {
+          item.isExpanded = false;
+        });
+        return;
+      }
 
       if (!(category && itemName)) {
         console.error('更新内容信息失败！');
         return;
       }
-
-      const { contentInfo, contentList } = this;
 
       const categoryInfo = contentList.find((item) => {
         return (item.name === category);
@@ -294,12 +375,12 @@ export default {
       });
 
       if (itemInfo) {
+        setTitle(itemInfo.title);
         contentInfo.category = category;
         contentInfo.createdAt = (itemInfo.createdAt || '无');
         contentInfo.updatedAt = (itemInfo.updatedAt || '无');
         contentInfo.itemName = (itemInfo.name || '');
         contentInfo.itemtitle = (itemInfo.title || '无标题');
-        setTitle(itemInfo.title);
       } else {
         console.error('获取内容信息失败！');
       }
