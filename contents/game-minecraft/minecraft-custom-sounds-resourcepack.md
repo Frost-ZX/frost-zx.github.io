@@ -14,7 +14,8 @@
 
 ### 示例资源包文件结构
 
-[collapse title="文件结构（使用默认的命名空间：minecraft，可根据需要修改）"]
+使用默认的命名空间 `minecraft`，可根据需要修改。
+
 ```text
 [ ] 为文件夹
 
@@ -27,7 +28,6 @@
 -- pack.mcmeta
 -- pack.png
 ```
-[/collapse]
 
 ### sounds.json 解析
 
@@ -214,6 +214,5 @@ playsound example:custom.sound.a master @a[x=0,y=80,z=0,r=20] ~ ~ ~ 100
 
 ### 示例资源包文件
 
-[file href="https://file.frozenstudio.top/files/minecraft/archive/SoundsDemoDefaultNamespace-1.12.2.zip"]默认命名空间（Minecraft 1.12.2）[/file]
-
-[file href="https://file.frozenstudio.top/files/minecraft/archive/SoundsDemoCustomNamespace-1.12.2.zip"]自定义命名空间（Minecraft 1.12.2）[/file]
+- [默认命名空间（Minecraft 1.12.2）](/files/minecraft-custom-sounds-resourcepack/SoundsDemoDefaultNamespace-1.12.2.zip)
+- [自定义命名空间（Minecraft 1.12.2）](/files/minecraft-custom-sounds-resourcepack/SoundsDemoCustomNamespace-1.12.2.zip)

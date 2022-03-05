@@ -128,6 +128,12 @@ var appConfig = {
             label: '科技 / 开发',
             items: [
                 {
+                    name: 'vue-cli-less-global-variables',
+                    title: '「Web 前端」Vue CLI 配置 Less 全局变量',
+                    createdAt: '2021-07-09',
+                    updatedAt: '2021-12-26'
+                },
+                {
                     name: 'javascript-export-ncm-playlist-song-info',
                     title: '「JavaScript」提取（导出）网易云音乐歌单歌曲列表信息为文件',
                     createdAt: '2021-05-03',
@@ -182,6 +188,12 @@ var appConfig = {
                     updatedAt: '2021-12-26'
                 },
                 {
+                    name: 'useful-css-javascript-libraries',
+                    title: '「合集」实用的 CSS / JavaScript 库',
+                    createdAt: '2018-11-02',
+                    updatedAt: '2022-02-19'
+                },
+                {
                     name: 'windows-vbs-code',
                     title: '「合集」VBS 代码',
                     createdAt: '2018-10-22',
@@ -201,7 +213,7 @@ var appConfig = {
                 },
                 {
                     name: 'windows-bat-anti-autorun-virus',
-                    title: '「BAT工具」防止病毒在打开U盘时自动运行',
+                    title: '「BAT工具」防止病毒在U盘创建AUTORUN文件',
                     createdAt: '2018-02-20',
                     updatedAt: '2021-05-03'
                 },
@@ -230,12 +242,6 @@ var appConfig = {
                     updatedAt: '2021-10-10'
                 },
                 {
-                    name: 'vue-cli-less-global-variables',
-                    title: '「Web 前端」Vue CLI 配置 Less 全局变量',
-                    createdAt: '2021-07-09',
-                    updatedAt: '2021-12-26'
-                },
-                {
                     name: 'windows-useful-tools',
                     title: 'Windows 实用小工具推荐',
                     createdAt: '2020-11-10',
@@ -252,12 +258,6 @@ var appConfig = {
                     title: '解决 OBS 显示器捕获黑屏的三个方法',
                     createdAt: '2020-02-05',
                     updatedAt: '2021-05-03'
-                },
-                {
-                    name: 'useful-css-javascript-libraries',
-                    title: '「合集」实用的 CSS / JavaScript 库',
-                    createdAt: '2018-11-02',
-                    updatedAt: '2022-02-19'
                 },
                 {
                     name: 'mobile-qq-page-links',
@@ -347,7 +347,8 @@ var appConfig = {
                     name: 'bilibili-api',
                     title: 'bilibili API',
                     createdAt: '2020-12-16',
-                    updatedAt: '2022-02-19'
+                    updatedAt: '2022-02-19',
+                    isHide: true
                 },
                 {
                     name: 'recommend-useful-websites',
