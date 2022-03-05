@@ -133,6 +133,7 @@ export default {
   }
 
   img {
+    margin: 0.5rem 0;
     box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.1);
   }
 
