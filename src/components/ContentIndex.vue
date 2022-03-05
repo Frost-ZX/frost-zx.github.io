@@ -56,6 +56,7 @@ export default {
 }
 
 .index-item {
+  display: block;
   margin-bottom: 1.5em;
   cursor: pointer;
 
