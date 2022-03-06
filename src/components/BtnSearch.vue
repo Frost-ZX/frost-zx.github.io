@@ -1,3 +1,11 @@
+<docs>
+
+## $emit
+
+- show-search
+
+</docs>
+
 <template>
   <div class="float-btn btn-search" @click="toggleSearch()">
     <b-icon icon="magnify"></b-icon>

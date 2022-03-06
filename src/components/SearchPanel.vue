@@ -1,3 +1,12 @@
+<docs>
+
+## $emit
+
+- change-page
+- close
+
+</docs>
+
 <template>
   <div
     v-show="isShow"
