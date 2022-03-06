@@ -83,7 +83,7 @@
       </template>
 
       <!-- 返回顶部 -->
-      <to-top />
+      <btn-to-top />
 
     </div>
 
@@ -94,16 +94,16 @@
 import { setTitle, toast } from '@/assets/js/utils';
 import { getContentFile } from '@/request/index';
 
+import BtnToTop from '@/components/BtnToTop';
 import ContentIndex from '@/components/ContentIndex';
 import MarkdownParser from '@/components/MarkdownParser';
-import ToTop from '@/components/ToTop';
 
 export default {
   name: 'ContentView',
   components: {
+    BtnToTop,
     ContentIndex,
     MarkdownParser,
-    ToTop,
   },
   data() {
     return {
