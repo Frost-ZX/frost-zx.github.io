@@ -82,10 +82,23 @@
         />
       </template>
 
+      <!-- 搜索 -->
+      <btn-search
+        @show-search="toggleSearch(true)"
+      />
+
       <!-- 返回顶部 -->
       <btn-to-top />
 
     </div>
+
+    <!-- 搜索面板 -->
+    <search-panel
+      :is-show="isShowSearch"
+      :item-list="contentListAll"
+      @change-page="changePage"
+      @close="toggleSearch(false)"
+    />
 
   </div>
 </template>
@@ -94,16 +107,20 @@
 import { setTitle, toast } from '@/assets/js/utils';
 import { getContentFile } from '@/request/index';
 
+import BtnSearch from '@/components/BtnSearch';
 import BtnToTop from '@/components/BtnToTop';
 import ContentIndex from '@/components/ContentIndex';
 import MarkdownParser from '@/components/MarkdownParser';
+import SearchPanel from '@/components/SearchPanel';
 
 export default {
   name: 'ContentView',
   components: {
+    BtnSearch,
     BtnToTop,
     ContentIndex,
     MarkdownParser,
+    SearchPanel,
   },
   data() {
     return {
@@ -113,6 +130,9 @@ export default {
 
       /** 是否正在载入内容 */
       isLoading: false,
+
+      /** 是否显示搜索面板 */
+      isShowSearch: false,
 
       /** 是否在移动端显示侧边栏 */
       isShowSidebar: false,
@@ -317,6 +337,11 @@ export default {
      */
     setLoading(isLoading = false) {
       this.isLoading = isLoading;
+    },
+
+    /** 切换显示隐藏搜索面板 */
+    toggleSearch(isShow = false) {
+      this.isShowSearch = isShow;
     },
 
     /** 切换侧边栏显示隐藏 */
