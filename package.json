@@ -1,0 +1,21 @@
+{
+  "name": "frost-zx-blog",
+  "version": "1.0.0",
+  "description": "Frost-ZX 的博客",
+  "main": "scripts/index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "blog",
+    "VitePress"
+  ],
+  "author": "Frost-ZX",
+  "license": "GPL-3.0",
+  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "vitepress": "2.0.0-alpha.12"
+  }
+}
