@@ -16,6 +16,7 @@
   "license": "GPL-3.0",
   "packageManager": "pnpm@10.11.0",
   "devDependencies": {
+    "less": "^4.4.2",
     "vitepress": "2.0.0-alpha.12"
   }
 }
