@@ -12,7 +12,7 @@ export default defineConfig({
   titleTemplate: ':title - Frost-ZX',
   description: 'Frost-ZX 的博客',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.png' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
 
   // 构建配置
