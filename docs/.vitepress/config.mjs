@@ -26,7 +26,7 @@ export default defineConfig({
     logo: '/favicon.png',
     nav: [
       { text: '主页', link: '/' },
-      { text: '归档', link: '/archives' },
+      // { text: '归档', link: '/archives' },
       { text: '关于', link: '/about' },
       { text: '留言板', link: '/comments' },
       { text: '友情链接', link: '/links' },
