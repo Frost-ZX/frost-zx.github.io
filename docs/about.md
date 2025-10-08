@@ -19,9 +19,9 @@ title: 关于
 ## 个人简介
 
 - Web 前端开发工程师
-- 编程技能：`HTML` `CSS` `JavaScript` `Vue.js` `Node.js` `Electron`
+- 编程技能：`HTML` `CSS` `JavaScript` `Vue.js` `Node.js` `Electron` `uni-app`
 - 常用编辑器：Visual Studio Code
-- 兴趣爱好：纯音乐、风景、摄影、Minecraft、魔卡少女樱
+- 兴趣爱好：纯音乐、风景、摄影、Minecraft、洛天依、魔卡少女樱
 
 ## 统计信息
 
