@@ -58,4 +58,11 @@ export default defineConfig({
     hostname: 'https://blog.frost-zx.top',
   },
 
+  // Vite 配置
+  vite: {
+    build: {
+      assetsInlineLimit: 0,
+    },
+  },
+
 });
