@@ -13,6 +13,7 @@ export default defineConfig({
   description: 'Frost-ZX 的博客',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['meta', { name: 'keywords', content: 'blog,frost-zx,minecraft,博客,分享,记录,技术,教程' }],
   ],
 
   // 构建配置
