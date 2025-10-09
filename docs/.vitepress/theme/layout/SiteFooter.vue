@@ -17,7 +17,7 @@ const siteLinks = computed(() => {
     <div class="site-footer__row">
       <span>Copyright © {{ siteData.site.value.title }} • Powered by VitePress</span>
     </div>
-    <div class="site-footer__row">
+    <div v-if="false" class="site-footer__row">
       <span>友情链接：</span>
       <a
         v-for="(item, index) in siteLinks"

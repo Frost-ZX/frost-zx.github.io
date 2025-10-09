@@ -34,8 +34,7 @@ import FriendlySiteLinks from './.vitepress/components/FriendlySiteLinks.vue';
 - 图标：网站 LOGO 的直链（HTTPS；PNG、JPEG、ICO 等格式均可）
 - 描述（可选）：网站的简介
 
-> 本站可根据实际情况设置全站友链；
-> 目前本站的全站友链位于页面底部。
+<!-- > 本站可根据实际情况设置全站友链；目前本站的全站友链位于页面底部。 -->
 
 ## 注意事项
 
