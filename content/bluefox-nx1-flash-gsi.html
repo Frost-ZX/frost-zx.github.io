@@ -6,12 +6,12 @@
     <title>蓝狐（BLUEFOX）NX1 刷 GSI 系统 - Frost-ZX</title>
     <meta name="description" content="Frost-ZX 的博客">
     <meta name="generator" content="VitePress v2.0.0-alpha.12">
-    <link rel="preload stylesheet" href="/assets/style.C-A01HLh.css" as="style">
+    <link rel="preload stylesheet" href="/assets/style.DP8TPhqt.css" as="style">
     <link rel="preload stylesheet" href="/vp-icons.css" as="style">
-    <script type="module" src="/assets/chunks/metadata.cc0e6efc.js"></script>
-    <script type="module" src="/assets/app.DfM1Coge.js"></script>
+    <script type="module" src="/assets/chunks/metadata.fe5d42a1.js"></script>
+    <script type="module" src="/assets/app.rlwHkScE.js"></script>
     <link rel="preload" href="/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="modulepreload" href="/assets/chunks/theme.CkayESbq.js">
+    <link rel="modulepreload" href="/assets/chunks/theme.CjInHfA3.js">
     <link rel="modulepreload" href="/assets/chunks/framework.DZmKp_jX.js">
     <link rel="modulepreload" href="/assets/content_bluefox-nx1-flash-gsi.md.Bof0-9V5.lean.js">
     <link rel="icon" href="/favicon.ico">
@@ -25,7 +25,7 @@
 <span class="line"><span>No (Volume Down): Do not unlock bootloader.</span></span></code></pre></div><p>此时按下“音量加”键，确认解锁（<strong>将会清除手机数据，恢复出厂设置</strong>）。</p><p>等待片刻，如无意外，会显示“解锁成功”。</p><h3 id="三、刷入-gsi" tabindex="-1">三、刷入 GSI <a class="header-anchor" href="#三、刷入-gsi" aria-label="Permalink to “三、刷入 GSI”">​</a></h3><p>将下载的 GSI 文件包解压到 ADB 工具所在文件夹内。</p><blockquote><p>例如本文使用的 <code>aosp_arm64-exp-BP1A.250405.005.C1-13151952-61d23231.zip</code>，可以解压得到 <code>system.img</code> 和 <code>vbmeta.img</code> 这两个镜像文件。</p></blockquote><p>依次执行以下命令，刷入镜像：</p><div class="language-text"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>fastboot flash vbmeta vbmeta.img</span></span>
 <span class="line"><span>fastboot reboot fastboot</span></span>
 <span class="line"><span>fastboot flash system system.img</span></span>
-<span class="line"><span>fastboot reboot</span></span></code></pre></div><blockquote><p>注意：执行 <code>fastboot reboot fastboot</code> 命令后如果等待比较久都没出现“Finished”提示，则需要插拔一下数据线。</p></blockquote><p><img src="/assets/image-20250702232252-k8k0r2r.oYHVdRHe.png" alt="image" loading="lazy">​</p><p>‍</p></div></div></main><footer class="VPDocFooter" data-v-689a3e08 data-v-2b3e5820><!--[--><!--[--><!--[--><!--[--><hr class="custom__divider"><div class="doc-content-footer"><div class="post-tags"><!--[--><span class="VPBadge info"><!--[-->Android<!--]--></span><span class="VPBadge info"><!--[-->GSI<!--]--></span><span class="VPBadge info"><!--[-->刷机<!--]--></span><span class="VPBadge info"><!--[-->系统<!--]--></span><!--]--></div><div class="post-date" style=""><span>最后更新于：</span><span>2025-07-03 21:54:29</span></div></div><!--]--><!--]--><!--]--><!--]--><!----><!----></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><!----><!--[--><!--]--></div></div>
+<span class="line"><span>fastboot reboot</span></span></code></pre></div><blockquote><p>注意：执行 <code>fastboot reboot fastboot</code> 命令后如果等待比较久都没出现“Finished”提示，则需要插拔一下数据线。</p></blockquote><p><img src="/assets/image-20250702232252-k8k0r2r.oYHVdRHe.png" alt="image" loading="lazy">​</p><p>‍</p></div></div></main><footer class="VPDocFooter" data-v-689a3e08 data-v-2b3e5820><!--[--><!--[--><!--[--><!--[--><hr class="custom__divider"><div class="doc-content-footer"><div class="post-tags"><!--[--><span class="VPBadge info"><!--[-->Android<!--]--></span><span class="VPBadge info"><!--[-->GSI<!--]--></span><span class="VPBadge info"><!--[-->刷机<!--]--></span><span class="VPBadge info"><!--[-->系统<!--]--></span><!--]--></div><div class="post-date" style=""><span>最后更新于：</span><span>2025-07-03 21:54:29</span></div></div><!--]--><!--]--><!--]--><!--]--><!----><!----></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><!----><!--[--><div class="site-footer"><div class="site-footer__row"><span>Copyright © Frost-ZX • Powered by VitePress</span></div><!----></div><!--]--></div></div>
     
     
   </body>
