@@ -1,4 +1,5 @@
 :root {
+  --site-footer-height: 80px;
   --vp-c-indigo-1: #1E88E5;
   --vp-c-indigo-2: #2196F3;
   --vp-c-indigo-3: #42A5F5;
@@ -19,5 +20,15 @@
 
   .header-anchor {
     top: 0;
+  }
+}
+
+.VPDoc {
+  // 修正右侧目录栏的高度
+  .aside-curtain {
+    bottom: var(--site-footer-height);
+  }
+  .aside-container {
+    height: calc(100vh - 80px);
   }
 }

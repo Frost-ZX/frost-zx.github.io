@@ -31,12 +31,14 @@ const siteLinks = computed(() => {
 
 <style lang="less">
 .site-footer {
-  padding: 32px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--site-footer-height);
   background-color: var(--vp-c-bg-alt);
   color: var(--vp-c-text-1);
   font-size: 14px;
   line-height: 2;
-  text-align: center;
   user-select: none;
 
   a {
