@@ -34,7 +34,7 @@ export default defineConfig({
     ],
     outline: {
       label: '目录',
-      level: 2,
+      level: [2, 4],
     },
     sidebar: {
     },
