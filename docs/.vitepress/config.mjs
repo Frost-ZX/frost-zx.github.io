@@ -58,6 +58,13 @@ export default defineConfig({
     hostname: 'https://blog.frost-zx.top',
   },
 
+  // markdown-it 配置
+  markdown: {
+    image: {
+      lazyLoading: true,
+    }
+  },
+
   // Vite 配置
   vite: {
     build: {
