@@ -11,6 +11,9 @@ importers:
       '@frost-utils/javascript':
         specifier: ^2.1.3
         version: 2.1.3
+      artalk:
+        specifier: ^2.9.1
+        version: 2.9.1(marked@14.1.4)
     devDependencies:
       less:
         specifier: 4.4.2
@@ -479,6 +482,11 @@ packages:
     peerDependencies:
       vue: ^3.5.0
 
+  artalk@2.9.1:
+    resolution: {integrity: sha512-IFo9XqWDalsHy8BsmMA5SSB9bozBa/sBhTm/+O5KwA6DnC95lFKv7C6ScMx/Xa4ue5qSQ7VV5vxRgCh/raohkQ==}
+    peerDependencies:
+      marked: ^14.1.0
+
   birpc@2.6.1:
     resolution: {integrity: sha512-LPnFhlDpdSH6FJhJyn4M0kFO7vtQ5iPw24FnG0y21q09xC7e8+1LeR31S1MAIrDAHp4m7aas4bEkTDTvMAtebQ==}
 
@@ -589,6 +597,11 @@ packages:
 
   mark.js@8.11.1:
     resolution: {integrity: sha1-GA8fnr74sOY45BZq1S24eb6y/8U=}
+
+  marked@14.1.4:
+    resolution: {integrity: sha512-vkVZ8ONmUdPnjCKc5uTRvmkRbx4EAi2OkTOXmfTDhZz3OFqMNBM1oTTWwTr4HY4uAEojhzPf+Fy8F1DWa3Sndg==}
+    engines: {node: '>= 18'}
+    hasBin: true
 
   mdast-util-to-hast@13.2.0:
     resolution: {integrity: sha512-QGYKEuUsYT9ykKBCMOEDLsU5JRObWQusAolFMeko/tYPufNkRffBAQjIE+99jbA87xv6FgmjLtwjh9wBWajwAA==}
@@ -1152,6 +1165,10 @@ snapshots:
     dependencies:
       vue: 3.5.22
 
+  artalk@2.9.1(marked@14.1.4):
+    dependencies:
+      marked: 14.1.4
+
   birpc@2.6.1: {}
 
   ccount@2.0.1: {}
@@ -1289,6 +1306,8 @@ snapshots:
     optional: true
 
   mark.js@8.11.1: {}
+
+  marked@14.1.4: {}
 
   mdast-util-to-hast@13.2.0:
     dependencies:
