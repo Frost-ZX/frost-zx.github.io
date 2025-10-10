@@ -1,6 +1,6 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme';
-import DocContentFooter from './DocContentFooter.vue';
+import ContentFooter from './ContentFooter.vue';
 import SiteFooter from './SiteFooter.vue';
 
 const { Layout } = DefaultTheme;
@@ -10,7 +10,7 @@ const { Layout } = DefaultTheme;
   <Layout>
     <template #doc-footer-before>
       <hr class="custom__divider" />
-      <DocContentFooter />
+      <ContentFooter />
     </template>
     <template #layout-bottom>
       <SiteFooter />
