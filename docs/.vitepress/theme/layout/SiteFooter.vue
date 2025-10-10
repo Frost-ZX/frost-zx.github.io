@@ -3,7 +3,7 @@ import { useData } from 'vitepress';
 import { computed } from 'vue';
 import { siteLinksOnline } from '../../site-links.mjs';
 
-const siteData = useData();
+const { site: siteData } = useData();
 
 const siteLinks = computed(() => {
   return siteLinksOnline.filter((item) => {
@@ -15,7 +15,7 @@ const siteLinks = computed(() => {
 <template>
   <div class="site-footer">
     <div class="site-footer__row">
-      <span>Copyright © {{ siteData.site.value.title }} • Powered by VitePress</span>
+      <span>Copyright © {{ siteData.title }} • Powered by VitePress</span>
     </div>
     <div v-if="false" class="site-footer__row">
       <span>友情链接：</span>
