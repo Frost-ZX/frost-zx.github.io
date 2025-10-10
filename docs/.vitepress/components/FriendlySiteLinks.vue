@@ -15,40 +15,30 @@ import { siteLinksOnline, siteLinksOffline } from '../site-links.mjs';
 /** 默认图标 */
 const defaultAvatar = withBase('/default-avatar.svg');
 
-/**
- * @desc 网站列表
- * @type {ReturnType<typeof ref<SiteItem[]>>}
- */
-const siteListOnline = ref([]);
+/** 网站列表 */
+const siteListOnline = ref(siteLinksOnline.map((item) => {
+  return {
+    siteTitle: item.siteTitle,
+    siteDesc: item.siteDesc,
+    siteUrl: item.siteUrl,
+    iconUrl0: item.iconUrl,
+    iconUrl1: '',
+  };
+}));
 
-/**
- * @desc 网站列表
- * @type {ReturnType<typeof ref<SiteItem[]>>}
- */
-const siteListOffline = ref([]);
+/** 网站列表 */
+const siteListOffline = ref(siteLinksOffline.map((item) => {
+  return {
+    siteTitle: item.siteTitle,
+    siteDesc: item.siteDesc,
+    siteUrl: item.siteUrl,
+    iconUrl0: item.iconUrl,
+    iconUrl1: '',
+  };
+}));
 
 /** 初始化数据 */
 function initData() {
-
-  siteListOnline.value = siteLinksOnline.map((item) => {
-    return {
-      siteTitle: item.siteTitle,
-      siteDesc: item.siteDesc,
-      siteUrl: item.siteUrl,
-      iconUrl0: item.iconUrl,
-      iconUrl1: '',
-    };
-  });
-
-  siteListOffline.value = siteLinksOffline.map((item) => {
-    return {
-      siteTitle: item.siteTitle,
-      siteDesc: item.siteDesc,
-      siteUrl: item.siteUrl,
-      iconUrl0: item.iconUrl,
-      iconUrl1: '',
-    };
-  });
 
   ((dataList) => {
     dataList.forEach((siteList) => {
