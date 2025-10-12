@@ -5,6 +5,82 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+/**
+ * @description 处理 Markdown 文件的 frontmatter
+ * - 给 title 属性值加上引号
+ * @param {string} filePath Markdown 文件路径
+ */
+function convertFrontmatter(filePath) {
+  try {
+
+    // 读取文件内容
+    let contentOld = readFileSync(filePath, { encoding: 'utf-8' });
+
+    // 匹配 frontmatter（介于 --- 之间的内容）
+    let frontmatterRegExp = /^---\n([\s\S]*?)\n---/;
+    let frontmatterMatched = contentOld.match(frontmatterRegExp);
+    let frontmatterStr = frontmatterMatched ? frontmatterMatched[1] : '';
+
+    if (!frontmatterStr) {
+      console.warn(`文件 ${filePath} 没有找到 frontmatter`);
+      return;
+    }
+
+    /** @type {Record<string, string>} */
+    let frontmatterInfo = {};
+
+    let frontmatterLines = frontmatterStr.split('\n').map((line) => {
+      return line.trim();
+    }).filter((line) => {
+      return line !== '';
+    });
+
+    for (let line of frontmatterLines) {
+
+      // 跳过注释行
+      if (line.startsWith('#')) {
+        continue;
+      }
+
+      // 匹配 key: value 格式
+      let matched = line.match(/^(\w+):\s*(.*)$/);
+
+      if (!matched) {
+        continue;
+      }
+
+      let key = matched[1];
+      let value = matched[2];
+
+      frontmatterInfo[key] = value;
+
+    }
+
+    let titleInfo = frontmatterInfo['title'];
+
+    // 标题添加引号
+    if (!titleInfo.startsWith('"') && !titleInfo.endsWith('"')) {
+      frontmatterInfo['title'] = `"${titleInfo.replace(/"/g, '\\"')}"`;
+    }
+
+    let frontmatterNew = '---\n' + Object.keys(frontmatterInfo).map((key) => {
+      return `${key}: ${frontmatterInfo[key]}`;
+    }).join('\n') + '\n---';
+
+    // 替换整个 frontmatter
+    let contentNew = contentOld.replace(frontmatterRegExp, frontmatterNew);
+
+    // 写回文件
+    writeFileSync(filePath, contentNew, { encoding: 'utf-8', flag: 'w' });
+
+    console.info('处理文件 frontmatter 完成');
+
+  } catch (error) {
+    console.error(`处理文件 ${filePath} 时出错：`);
+    console.error(String(error));
+  }
+}
+
 /** 转换 Markdown 表格为 JSON */
 function markdownTableToJson(markdownTable = '') {
 
@@ -104,8 +180,9 @@ function markdownTableToJson(markdownTable = '') {
       continue;
     }
 
-    console.warn(`重命名文件：${oldName} -> ${newName}`);
+    console.info(`重命名文件：${oldName} -> ${newName}`);
     renameSync(oldPath, newPath);
+    convertFrontmatter(newPath);
 
   }
 
