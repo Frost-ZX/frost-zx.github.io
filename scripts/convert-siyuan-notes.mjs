@@ -87,7 +87,7 @@ function markdownTableToJson(markdownTable = '') {
   for (let i = indexJson.length - 1; i >= 0; i--) {
 
     let item = indexJson[i];
-    let oldName = (item['title'] + '.md').replace(/("|:)/g, '_');
+    let oldName = (item['title'] + '.md').replace(/[":<>]/g, '_');
     let oldPath = join(markdownDir, oldName);
     let newName = item['slug'] + '.md';
     let newPath = join(markdownDir, newName);
