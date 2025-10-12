@@ -44,17 +44,22 @@ function markdownTableToJson(markdownTable = '') {
   let jsonArray = dataRows.map(row => {
 
     let obj = {
-      'created-at': '',
-      'is-hide': '',
-      'slug': '',
       'title': '',
+      'slug': '',
+      'created-at': '',
       'updated-at': '',
+      'is-hide': '',
     };
 
     headers.forEach((header, index) => {
+
       let key = header.trim();
       let text = row[index];
-      obj[key] = text ? text.trim() : '';
+
+      if (typeof obj[key] !== 'undefined') {
+        obj[key] = text ? text.trim() : '';
+      }
+
     });
 
     return obj;
