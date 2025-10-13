@@ -23,7 +23,7 @@ const artalk = shallowRef(null);
  */
 const commentWrapper = shallowRef(null);
 
-/** 销毁 */
+/** 销毁评论模块 */
 function destroyComments() {
 
   console.debug('[Artalk] destroyComments');
@@ -35,12 +35,13 @@ function destroyComments() {
 
 }
 
-/** 初始化 */
+/** 初始化评论模块 */
 function initComments() {
 
   console.debug('[Artalk] initComments');
 
   let instance = Artalk.init({
+    darkMode: pageData.isDark.value,
     el: commentWrapper.value,
     pageKey: location.pathname,
     pageTitle: pageData.title.value,
@@ -52,7 +53,7 @@ function initComments() {
 
 }
 
-/** 更新 */
+/** 更新评论信息 */
 function updateComments() {
 
   console.debug('[Artalk] updateComments');
@@ -67,6 +68,18 @@ function updateComments() {
 
 }
 
+/** 更新评论深色模式 */
+function updateDarkMode(enabled = false) {
+
+  console.debug('[Artalk] updateDarkMode');
+
+  if (artalk.value) {
+    artalk.value.setDarkMode(enabled);
+  }
+
+}
+
+watch(pageData.isDark, updateDarkMode);
 watch(() => route.path, updateComments);
 
 onMounted(() => {
