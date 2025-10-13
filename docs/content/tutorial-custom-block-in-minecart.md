@@ -1,5 +1,5 @@
 ---
-title: 「Minecraft」矿车内显示自定义方块
+title: "「Minecraft」矿车内显示自定义方块"
 date: 2025-03-16T19:32:19Z
 lastmod: 2025-03-16T19:38:03Z
 tags: [Minecraft,教程,命令,命令方块]

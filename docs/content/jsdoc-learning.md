@@ -1,5 +1,5 @@
 ---
-title: 「JavaScript」JSDoc 学习记录
+title: "「JavaScript」JSDoc 学习记录"
 date: 2025-03-15T23:19:54Z
 lastmod: 2025-03-15T23:25:49Z
 tags: [JavaScript,Web 前端,学习,记录]
@@ -149,7 +149,7 @@ function example(options) {
 **数组和对象**
 
 > JSDoc 支持 Closure Compiler 语法定义的数组和对象类型。  
-> 可以在类型名称的后方添加 `[]` 描述数组项的类型。例如 `string[]` 表示字符串数组。  
+> 可以在类型名称的后方添加 `[]`​ 描述数组项的类型。例如 `string[]` 表示字符串数组。  
 > 对于具有已知的属性的对象，可以使用 Closure Compiler 语法描述类型。可以分别描述每个属性，以便为每个属性指定更详细的信息。
 
 一个保存 MyClass 实例对象的数组：
@@ -171,7 +171,7 @@ function example(options) {
 {Object.<number, object>}
 ```
 
-一个名称为 `myObj`，包含属性 `a`（number）和 `b`（任意类型）的对象：
+一个名称为 `myObj`​，包含属性 `a`​（number）和 `b`（任意类型）的对象：
 
 ```plaintext
 {{a: number, b: string, c}} myObj
@@ -186,7 +186,7 @@ function example(options) {
 > 可以使用 `import` 导入其他文件中的类型。  
 > 注意：此语法是特定于 TypeScript 的，不同于 JSDoc 标准。
 
-从文件 `types.js` 中导入 `Example` 类型
+从文件 `types.js`​ 中导入 `Example` 类型
 
 ```plaintext
 { import("./types").Example }

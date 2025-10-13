@@ -1,5 +1,5 @@
 ---
-title: CORS 预检请求（preflight request）
+title: "CORS 预检请求（preflight request）"
 date: 2025-03-15T23:08:14Z
 lastmod: 2025-03-15T23:08:41Z
 tags: [Web 前端,JavaScript,HTTP]
@@ -39,7 +39,7 @@ CORS 预检请求主要用于检测服务器是否支持 CORS（跨域资源共�
   - text/plain
   - multipart/form-data
   - application/x-www-form-urlencoded
-- 请求中的任意 `XMLHttpRequest` 对象均没有注册任何事件监听器；可以通过 `XMLHttpRequest.upload` 属性访问 `XMLHttpRequest` 对象。
+- 请求中的任意 `XMLHttpRequest`​ 对象均没有注册任何事件监听器；可以通过 `XMLHttpRequest.upload`​ 属性访问 `XMLHttpRequest` 对象。
 - 请求中没有使用 `ReadableStream` 对象。
 
 ‍

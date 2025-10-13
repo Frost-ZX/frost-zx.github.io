@@ -1,5 +1,5 @@
 ---
-title: 「Minecraft」In-Game Info XML 样式
+title: "「Minecraft」In-Game Info XML 样式"
 date: 2025-03-16T18:37:30Z
 lastmod: 2025-03-16T18:39:48Z
 tags: [Minecraft,模组,分享,代码片段]
@@ -23,13 +23,13 @@ tags: [Minecraft,模组,分享,代码片段]
 
 #### 方法一
 
-1. 把代码保存为 `InGameInfo.xml` 文件（编码 `UTF-8`），放入 `.minecraft/config/` 文件夹。
+1. 把代码保存为 `InGameInfo.xml`​ 文件（编码 `UTF-8`​），放入 `.minecraft/config/` 文件夹。
 2. 启动游戏或直接在游戏中执行命令 `/igi reload` 进行加载。
 
 #### 方法二
 
-1. 把代码保存为 `文件名.xml` 文件（文件名自定义；编码 `UTF-8`），放入 `.minecraft/config/` 文件夹。
-2. 在游戏中执行命令 `/igi load 文件名.xml`（`文件名` 是第 1 步中自己修改的文件名）进行加载。
+1. 把代码保存为 `文件名.xml`​ 文件（文件名自定义；编码 `UTF-8`​），放入 `.minecraft/config/` 文件夹。
+2. 在游戏中执行命令 `/igi load 文件名.xml`​（`文件名` 是第 1 步中自己修改的文件名）进行加载。
 
 ## 效果图
 

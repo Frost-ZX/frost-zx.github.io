@@ -1,5 +1,5 @@
 ---
-title: Fabric.js 简单介绍和使用
+title: "Fabric.js 简单介绍和使用"
 date: 2025-03-15T22:51:22Z
 lastmod: 2025-03-15T22:55:55Z
 tags: [Web 前端,JavaScript,Canvas,Fabric.js]
@@ -26,53 +26,53 @@ Fabric.js 是一个功能强大的 Canvas 库，它在原生 Canvas 之上提供
 
 |名称|描述|
 | ------| ------------------------------|
-|​`ActiveSelection`​|选区|
-|​`Group`​|分组|
-|​`Image`​|图像|
-|​`Line`​|线段|
-|​`Rect`​|矩形|
-|​`Text`​|文本（不可编辑，不换行）|
-|​`IText`​|可编辑文本（可编辑，不换行）|
-|​`Textbox`​|文本框（可编辑，自动换行）|
+|​`ActiveSelection`|选区|
+|​`Group`|分组|
+|​`Image`|图像|
+|​`Line`|线段|
+|​`Rect`|矩形|
+|​`Text`|文本（不可编辑，不换行）|
+|​`IText`|可编辑文本（可编辑，不换行）|
+|​`Textbox`|文本框（可编辑，自动换行）|
 
 ### 常用属性
 
 |属性|描述|
 | ------| ---------------------------------------------|
-|​`type`​|对象类型|
-|​`data`​|用于添加自定义的数据|
-|​`originX`​|对象转换的水平原点（left / center / right）|
-|​`originY`​|对象转换的垂直原点（top / center / bottom）|
-|​`left`​|水平坐标|
-|​`top`​|垂直坐标|
-|​`width`​|宽度|
-|​`height`​|高度|
-|​`angle`​|旋转角度|
-|​`scaleX`​|水平方向缩放倍数|
-|​`scaleY`​|垂直方向缩放倍数|
-|​`stroke`​|线段颜色|
-|​`strokeWidth`​|线段宽度|
-|​`fill`​|填充颜色|
-|​`fontFamily`​|文本字体名称|
-|​`fontSize`​|文本字体大小|
-|​`opacity`​|对象的不透明度|
-|​`borderColor`​|选区边框颜色|
-|​`borderDashArray`​|选区边框虚线样式|
-|​`borderOpacityWhenMoving`​|选区拖拽时的边框透明度|
-|​`cornerColor`​|选区 “操作点” 填充颜色|
-|​`cornerSize`​|选区 “操作点” 大小|
-|​`cornerStrokeColor`​|选区 “操作点” 描边颜色|
-|​`cornerStyle`​|选区 “操作点” 样式（circle / rect）|
-|​`transparentCorners`​|选区 “操作点” 中心是否透明（只有描边）|
-|​`hasControls`​|是否有 “操作点”|
-|​`lockRotation`​|是否禁止旋转对象|
-|​`lockMovementX`​|是否禁止水平移动对象|
-|​`lockMovementY`​|是否禁止垂直移动对象|
-|​`lockScaleX`​|是否禁止水平缩放对象|
-|​`lockScaleY`​|是否禁止垂直缩放对象|
-|​`selectable`​|是否可以被选中|
-|​`hoverCursor`​|光标在对象上方时的样式（子对象优先）|
-|​`moveCursor`​|光标在可移动对象上方时的样式（子对象优先）|
+|​`type`|对象类型|
+|​`data`|用于添加自定义的数据|
+|​`originX`|对象转换的水平原点（left / center / right）|
+|​`originY`|对象转换的垂直原点（top / center / bottom）|
+|​`left`|水平坐标|
+|​`top`|垂直坐标|
+|​`width`|宽度|
+|​`height`|高度|
+|​`angle`|旋转角度|
+|​`scaleX`|水平方向缩放倍数|
+|​`scaleY`|垂直方向缩放倍数|
+|​`stroke`|线段颜色|
+|​`strokeWidth`|线段宽度|
+|​`fill`|填充颜色|
+|​`fontFamily`|文本字体名称|
+|​`fontSize`|文本字体大小|
+|​`opacity`|对象的不透明度|
+|​`borderColor`|选区边框颜色|
+|​`borderDashArray`|选区边框虚线样式|
+|​`borderOpacityWhenMoving`|选区拖拽时的边框透明度|
+|​`cornerColor`|选区 “操作点” 填充颜色|
+|​`cornerSize`|选区 “操作点” 大小|
+|​`cornerStrokeColor`|选区 “操作点” 描边颜色|
+|​`cornerStyle`|选区 “操作点” 样式（circle / rect）|
+|​`transparentCorners`|选区 “操作点” 中心是否透明（只有描边）|
+|​`hasControls`|是否有 “操作点”|
+|​`lockRotation`|是否禁止旋转对象|
+|​`lockMovementX`|是否禁止水平移动对象|
+|​`lockMovementY`|是否禁止垂直移动对象|
+|​`lockScaleX`|是否禁止水平缩放对象|
+|​`lockScaleY`|是否禁止垂直缩放对象|
+|​`selectable`|是否可以被选中|
+|​`hoverCursor`|光标在对象上方时的样式（子对象优先）|
+|​`moveCursor`|光标在可移动对象上方时的样式（子对象优先）|
 
 ### 常用方法
 
@@ -80,35 +80,35 @@ Fabric.js 是一个功能强大的 Canvas 库，它在原生 Canvas 之上提供
 
 |方法|描述|
 | ------| ------------------------------------|
-|​`add(...object)`​|添加对象到画布|
-|​`insertAt(object, index, nonSplicing)`​|添加对象到画布指定层级|
-|​`moveTo(object, index)`​|更改对象所在的层级|
-|​`remove(...object)`​|移除画布上的对象|
-|​`discardActiveObject()`​|取消选中对象|
-|​`getActiveObject()`​|获取选中的对象|
-|​`setActiveObject()`​|更改选中的对象|
-|​`getPointer()`​|传递事件对象，获取相对于画布的坐标|
-|​`fire()`​|触发画布事件|
-|​`forEachObject()`​|遍历画布上的对象|
-|​`getZoom()`​|获取画布缩放比例|
-|​`setZoom()`​|设置画布缩放比例|
-|​`on()`​|监听画布事件|
-|​`requestRenderAll()`​|刷新画布|
-|​`set()`​|设置画布属性|
+|​`add(...object)`|添加对象到画布|
+|​`insertAt(object, index, nonSplicing)`|添加对象到画布指定层级|
+|​`moveTo(object, index)`|更改对象所在的层级|
+|​`remove(...object)`|移除画布上的对象|
+|​`discardActiveObject()`|取消选中对象|
+|​`getActiveObject()`|获取选中的对象|
+|​`setActiveObject()`|更改选中的对象|
+|​`getPointer()`|传递事件对象，获取相对于画布的坐标|
+|​`fire()`|触发画布事件|
+|​`forEachObject()`|遍历画布上的对象|
+|​`getZoom()`|获取画布缩放比例|
+|​`setZoom()`|设置画布缩放比例|
+|​`on()`|监听画布事件|
+|​`requestRenderAll()`|刷新画布|
+|​`set()`|设置画布属性|
 
 #### 对象（Object）
 
 |方法|描述|
 | ------| ------------------------------|
-|​`bringToFront()`​|改变对象层级，置顶|
-|​`bringForward()`​|改变对象层级，上移|
-|​`sendBackwards()`​|改变对象层级，下移|
-|​`sendToBack()`​|改变对象层级，置底|
-|​`intersectsWithObject()`​|检测两个对象是否相交（重叠）|
-|​`isContainedWithinObject()`​|检测对象是在另外一个对象内|
-|​`on()`​|监听对象事件|
-|​`set()`​|设置对象属性|
-|​`toDataURL()`​|转换为 Base64|
+|​`bringToFront()`|改变对象层级，置顶|
+|​`bringForward()`|改变对象层级，上移|
+|​`sendBackwards()`|改变对象层级，下移|
+|​`sendToBack()`|改变对象层级，置底|
+|​`intersectsWithObject()`|检测两个对象是否相交（重叠）|
+|​`isContainedWithinObject()`|检测对象是在另外一个对象内|
+|​`on()`|监听对象事件|
+|​`set()`|设置对象属性|
+|​`toDataURL()`|转换为 Base64|
 
 ## 创建对象
 
@@ -231,9 +231,9 @@ canvas.add(el);
 
 ### 画布内容撤销、恢复
 
-主要通过 Fabric.js 画布对象的 `toObject()` 和 `loadFromJSON()` 方法实现。
+主要通过 Fabric.js 画布对象的 `toObject()`​ 和 `loadFromJSON()` 方法实现。
 
-为了提高性能，默认情况下 `toObject()` 只会导出对象上**常用**的属性，其他属性（例如 `data`、`selectable`）不会被导出，需要手动在其 `propertiesToInclude` 参数中指定（例如 `canvas.toObject(['data', 'selectable'])`）。
+为了提高性能，默认情况下 `toObject()`​ 只会导出对象上**常用**的属性，其他属性（例如 `data`​、`selectable`​）不会被导出，需要手动在其 `propertiesToInclude`​ 参数中指定（例如 `canvas.toObject(['data', 'selectable'])`）。
 
 ### 画布内容导出为图片
 
@@ -279,7 +279,7 @@ let dataURL = rect.toDataURL({
 The canvas has been tainted by cross-origin data.
 ```
 
-其中一种解决方式是先使用 `new Image()` 设置 `crossorigin` 属性，加载图片，再创建 `fabric.Image` 对象（参考 “创建对象 - 图片”）。
+其中一种解决方式是先使用 `new Image()`​ 设置 `crossorigin`​ 属性，加载图片，再创建 `fabric.Image` 对象（参考 “创建对象 - 图片”）。
 
 ### 画布自适应父 DOM 元素宽高
 
@@ -376,7 +376,7 @@ clearTimeout(debounce);
 
 ### 解决画布缩放后，对象显示模糊
 
-把对象的 `objectCaching` 属性设置为 `false`，关闭缓存即可。
+把对象的 `objectCaching`​ 属性设置为 `false`，关闭缓存即可。
 
 例如：
 
@@ -429,13 +429,13 @@ const item = new fabric.Rect({
 });
 ```
 
-**关于** **​`absolutePositioned`​** **属性：**
+**关于** **​`absolutePositioned`​**​ **属性：**
 
-仅当对象作为 `clipPath` 使用时才有意义。如果为 `true`，`clipPath` 的位置将会相对于画布，且不受对象变换影响。（[JSDoc: Class: Object#absolutePositioned](http://fabricjs.com/docs/fabric.Object.html#absolutePositioned)）
+仅当对象作为 `clipPath`​ 使用时才有意义。如果为 `true`​，`clipPath`​ 的位置将会相对于画布，且不受对象变换影响。（[JSDoc: Class: Object#absolutePositioned](http://fabricjs.com/docs/fabric.Object.html#absolutePositioned)）
 
 **注意：**
 
-后续通过 `.set()` 更新对象的 `clipPath` 属性时，建议同时将其 `dirty` 属性设置为 `true`，以便清除缓存，防止裁剪区域没有更新。（[JSDoc: Class: Object#dirty](http://fabricjs.com/docs/fabric.Object.html#dirty)）
+后续通过 `.set()`​ 更新对象的 `clipPath`​ 属性时，建议同时将其 `dirty`​ 属性设置为 `true`​，以便清除缓存，防止裁剪区域没有更新。（[JSDoc: Class: Object#dirty](http://fabricjs.com/docs/fabric.Object.html#dirty)）
 
 ```javascript
 item.set({ clipPath: null, dirty: true });
@@ -443,7 +443,7 @@ item.set({ clipPath: null, dirty: true });
 
 ### 鼠标滚轮缩放画布
 
-主要用到了画布的鼠标事件（`mouse:wheel`）以及调用画布的 `zoomToPoint()` 方法改变视图缩放。
+主要用到了画布的鼠标事件（`mouse:wheel`​）以及调用画布的 `zoomToPoint()` 方法改变视图缩放。
 
 ```javascript
 // 监听事件：鼠标滚轮
@@ -497,9 +497,9 @@ canvas.on('mouse:wheel', function (ev) {
 
 ### 鼠标拖拽移动画布
 
-主要用到了画布的鼠标事件（`mouse:down`、`mouse:move` 和 `mouse:up`）以及调用画布的 `setViewportTransform()` 方法改变视图偏移量。
+主要用到了画布的鼠标事件（`mouse:down`​、`mouse:move`​ 和 `mouse:up`​）以及调用画布的 `setViewportTransform()` 方法改变视图偏移量。
 
-注意：在拖拽前，若鼠标选中了对象，需要将对象的 `lockMovementX` 和 `lockMovementY` 属性设置为 `true`，锁定对象的移动，否则拖拽后对象的位置会变化。
+注意：在拖拽前，若鼠标选中了对象，需要将对象的 `lockMovementX`​ 和 `lockMovementY`​ 属性设置为 `true`，锁定对象的移动，否则拖拽后对象的位置会变化。
 
 ```javascript
 // 监听事件：鼠标按下
@@ -578,9 +578,9 @@ canvas.on('mouse:up', function ({ target }) {
 
 默认情况下，对于分组，`ev.target` 只能获取到整个分组，并不能具体到其中的对象。
 
-在创建分组时，将 `subTargetCheck` 属性设置为 `true`，即可通过 `ev.subTargets` 获取触发事件时的子对象。
+在创建分组时，将 `subTargetCheck`​ 属性设置为 `true`​，即可通过 `ev.subTargets` 获取触发事件时的子对象。
 
-对于支持该功能的事件（`mouse:down`、`mouse:up`、`mouse:move` 等），该属性为 `fabric.Object` 数组；
+对于支持该功能的事件（`mouse:down`​、`mouse:up`​、`mouse:move`​ 等），该属性为 `fabric.Object` 数组；
 
 对于不支持该功能的事件，该属性为 `undefined`。
 
@@ -603,7 +603,7 @@ canvas.on('mouse:down', function (ev) {
 
 Fabeic.js 的文本框对象（Textbox）默认支持文本自动换行，但只能在**空格**处换行，对于类似中文句子这种不带空格的字符串并不会换行，且文本框的宽度会自动被撑开。
 
-在 Fabric.js 2.6.0 版本中，新增了一个 `splitByGrapheme` 属性，将其设置为 `true` 即可启用在任意字符之间自动换行（参考：[JSDoc: Global](http://fabricjs.com/docs/global.html#splitByGrapheme)），例如：
+在 Fabric.js 2.6.0 版本中，新增了一个 `splitByGrapheme`​ 属性，将其设置为 `true`​ 即可启用在任意字符之间自动换行（参考：[JSDoc: Global](http://fabricjs.com/docs/global.html#splitByGrapheme)），例如：
 
 ```javascript
 const textbox = new fabric.Textbox('文本框', {

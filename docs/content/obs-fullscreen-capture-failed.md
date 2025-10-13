@@ -1,5 +1,5 @@
 ---
-title: 解决 OBS 显示器捕获黑屏的三个方法
+title: "解决 OBS 显示器捕获黑屏的三个方法"
 date: 2025-03-16T16:22:52Z
 lastmod: 2025-03-16T16:23:19Z
 tags: [Windows,软件,OBS,配置]
@@ -23,8 +23,8 @@ tags: [Windows,软件,OBS,配置]
 
 - 找到 OBS 的可执行文件：
 
-  - 32位：`OBS安装路径\bin\32bit\obs32.exe`​
-  - 64位：`OBS安装路径\bin\64bit\obs64.exe`​
+  - 32位：`OBS安装路径\bin\32bit\obs32.exe`
+  - 64位：`OBS安装路径\bin\64bit\obs64.exe`
 - 右键点击 `可执行文件`，点击“属性”
 - 根据图中的标出的内容修改设置，并点击“确定”  
   ​![方法一](assets/network-asset-01-20250316162312-8e508cs.png "方法一")

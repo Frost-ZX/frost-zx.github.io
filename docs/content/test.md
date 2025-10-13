@@ -1,5 +1,5 @@
 ---
-title: 内容格式测试
+title: "内容格式测试"
 date: 2025-03-16T22:27:03Z
 lastmod: 2025-10-07T18:32:34Z
 tags: [测试,格式,Markdown]
@@ -9,7 +9,7 @@ tags: [测试,格式,Markdown]
 
 ## 目录
 
-​`[TOC]`​
+​`[TOC]`
 
 ## 字体样式
 
@@ -90,7 +90,7 @@ System.out.println("MarkDown");
 
 ## 格式
 
-- ​`重点文字`​
+- ​`重点文字`
 - ~~删除线~~
 - <u>下划线</u>
 - ==高亮==
@@ -100,7 +100,7 @@ System.out.println("MarkDown");
 
 ## 图片
 
-![Favicon](/favicon.ico)​
+![Favicon](/favicon.ico)
 
 ## 表格
 
@@ -144,6 +144,6 @@ System.out.println("MarkDown");
 
 ### 手动换行
 
-HTML 标签 `<br>`​
+HTML 标签 `<br>`
 
 ‍

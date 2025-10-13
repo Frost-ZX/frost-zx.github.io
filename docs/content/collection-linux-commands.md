@@ -1,5 +1,5 @@
 ---
-title: 「合集」Linux 常用命令
+title: "「合集」Linux 常用命令"
 date: 2025-03-16T19:25:02Z
 lastmod: 2025-03-16T19:28:22Z
 tags: [合集,Linux,命令]
@@ -15,7 +15,7 @@ tags: [合集,Linux,命令]
 
 ## init
 
-重启：`init 6`​
+重启：`init 6`
 
 ---
 
@@ -25,9 +25,9 @@ tags: [合集,Linux,命令]
 
 配置自动维护日志文件大小
 
-只保留近两周的日志：`journalctl --vacuum-time=2w`​
+只保留近两周的日志：`journalctl --vacuum-time=2w`
 
-只保留 256MB 的日志：`journalctl --vacuum-size=256M`​
+只保留 256MB 的日志：`journalctl --vacuum-size=256M`
 
 参考：[Linux 系统 /var/log/journal/ 垃圾日志清理](https://cloud.tencent.com/developer/article/1446278)
 
@@ -51,7 +51,7 @@ pkill -kill -t <tty>
 
 说明：
 
-​`<tty>` 为要踢的用户的 tty，例如 `pkill -kill -t pts/1`。
+​`<tty>`​ 为要踢的用户的 tty，例如 `pkill -kill -t pts/1`。
 
 ---
 
@@ -125,38 +125,38 @@ screen -r -d name
 
 ### 命令
 
-#### 压缩当前路径下的 `test/content/` 文件夹为 `file.tgz`​
+#### 压缩当前路径下的 `test/content/`​ 文件夹为 `file.tgz`
 
 ```bash
 tar -zcvf file.tgz test/content/
 ```
 
-#### 压缩当前路径下的 `test/content/` 文件夹和 `test/text.txt` 文件为 `file.tgz`​
+#### 压缩当前路径下的 `test/content/`​ 文件夹和 `test/text.txt`​ 文件为 `file.tgz`
 
 ```bash
 tar -zcvf file.tgz test/content/ test/text.txt
 ```
 
-#### 压缩 `当前路径` 的文件夹为 `file.tgz`​
+#### 压缩 `当前路径`​ 的文件夹为 `file.tgz`
 
 ```bash
 tar -zcvf file.tgz ./
 ```
 
-#### 压缩当前路径下的 `test/content/` 文件夹为 `file.tgz`，
+#### 压缩当前路径下的 `test/content/`​ 文件夹为 `file.tgz`，
 
 ```bash
 # 其中不包含 `test/content/text_a.txt` 文件和 `test/content/test/text_b.txt` 文件
 tar --exclude=text_a.txt --exclude=test/text_b.txt -zcvf file.tgz test/content/
 ```
 
-#### 解压 `当前路径` 下的 `file.tar`​
+#### 解压 `当前路径`​ 下的 `file.tar`
 
 ```bash
 tar -xvf file.tar
 ```
 
-#### 解压 `当前路径` 下的 `file.tgz`​
+#### 解压 `当前路径`​ 下的 `file.tgz`
 
 ```bash
 tar -zxvf file.tgz
@@ -164,7 +164,7 @@ tar -zxvf file.tgz
 
 ## taskset
 
-指定 CPU `0~3` 执行当前路径下的 `start.sh`：
+指定 CPU `0~3`​ 执行当前路径下的 `start.sh`：
 
 ```bash
 taskset -c 0-3 ./start.sh

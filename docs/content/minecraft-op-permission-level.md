@@ -1,5 +1,5 @@
 ---
-title: 「Minecraft」OP 权限等级
+title: "「Minecraft」OP 权限等级"
 date: 2025-03-19T12:32:49Z
 lastmod: 2025-03-19T12:35:47Z
 tags: [Minecraft,科普]
@@ -39,7 +39,7 @@ tags: [Minecraft,科普]
 - 函数（Function）拥有权限等级 2（可以在 `server.properties` 中修改）。
 - 对于玩家：
 
-  - 若玩家在服务器中拥有 OP 权限，其权限等级可在服务端的 `ops.json` 文件中指定，默认权限等级可在 `server.properties` 中设置。
+  - 若玩家在服务器中拥有 OP 权限，其权限等级可在服务端的 `ops.json`​ 文件中指定，默认权限等级可在 `server.properties` 中设置。
   - 若玩家处于单人世界或为局域网世界的所有者（房主），且启用了作弊，则其权限等级为 4。
 
 ### 基岩版

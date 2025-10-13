@@ -1,5 +1,5 @@
 ---
-title: 「Web 前端」Vue 使用滚动条插件
+title: "「Web 前端」Vue 使用滚动条插件"
 date: 2025-03-15T23:15:09Z
 lastmod: 2025-03-15T23:15:38Z
 tags: [Web 前端,JavaScript,Vue.js,代码片段]

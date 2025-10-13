@@ -1,7 +1,7 @@
 ---
-title: 「合集」常用的 JavaScript 代码
+title: "「合集」常用的 JavaScript 代码"
 date: 2025-03-16T22:02:06Z
-lastmod: 2025-03-16T22:02:51Z
+lastmod: 2025-03-16T22:02:33Z
 tags: [合集,代码片段,Web 前端,JavaScript]
 ---
 
@@ -77,6 +77,43 @@ document.designMode = 'off';
 
 ## function
 
+#### Blob 转 DataURL
+
+```javascript
+/**
+ * @description 转换 Blob 为 DataURL
+ * @param   {Blob} blob
+ * @returns {Promise<{ dataURL: string; success: boolean; }>}
+ */
+function blobToDataURL(blob) {
+  return new Promise((resolve) => {
+
+    let fileReader = new FileReader();
+
+    // 处理读取异常
+    fileReader.onerror = function () {
+      resolve({
+        dataURL: '',
+        success: false,
+      });
+    };
+
+    // 处理读取完成
+    fileReader.onload = function () {
+      resolve({
+        dataURL: fileReader.result,
+        success: true,
+      });
+    };
+
+    // 开始读取
+    fileReader.readAsDataURL(blob);
+
+  });
+
+}
+```
+
 #### 查找元素的 Vue 对象
 
 ```javascript
@@ -134,7 +171,7 @@ function findElementVue(el) {
 }
 ```
 
-#### 查找字符 `char` 在 `str` 中第 `num` 次出现的位置
+#### 查找字符 `char`​ 在 `str`​ 中第 `num` 次出现的位置
 
 ```javascript
 function findChar(str = '', char = '', num = 1) {
@@ -146,6 +183,136 @@ function findChar(str = '', char = '', num = 1) {
     }
   }
   return index;
+}
+```
+
+#### 处理过渡效果
+
+```javascript
+// https://www.npmjs.com/package/d3-ease
+
+/**
+ * @description 处理过渡效果
+ * @param {object}   opts
+ * @param {number}   opts.duration 时长（毫秒）
+ * @param {Function} opts.easeFn   过渡计算函数
+ * @param {Function} opts.onStop   结束时回调
+ * @param {Function} opts.onTick   进行时回调
+ * @returns {Promise<boolean>}
+ */
+function easeHandler(opts = {}) {
+
+  const {
+    duration = 0,
+    easeFn = easeLinear,
+    onStop = null,
+    onTick = null,
+  } = opts;
+
+  const isValid = (
+    (typeof duration === 'number' && duration >= 0) &&
+    (typeof easeFn === 'function') &&
+    (onStop ? typeof onStop === 'function' : true) &&
+    (onTick ? typeof onTick === 'function' : true)
+  );
+
+  if (!isValid) {
+    console.error('处理失败：参数错误');
+    return Promise.resolve(false);
+  }
+
+  // 时长为 0，直接结束
+  if (duration === 0) {
+    onTick && onTick(1);
+    onStop && onStop();
+    return Promise.resolve(true);
+  }
+
+  const sTime = Date.now();
+  const eTIme = sTime + duration;
+
+  return new Promise((resolve) => {
+
+    const fn = function () {
+      try {
+
+        const curr = Date.now();
+        const diff = Math.min(duration, curr - sTime);
+        const p = parseFloat((diff / duration).toFixed(3));
+        const n = parseFloat(easeFn(p).toFixed(3));
+
+        if (curr < eTIme) {
+          // [继续]
+          onTick && onTick(n);
+          requestAnimationFrame(fn);
+        } else {
+          // [结束]
+          onTick && onTick(1);
+          onStop && onStop();
+          resolve(true);
+        }
+
+      } catch (error) {
+        console.error('处理失败：');
+        console.error(error);
+        resolve(false);
+      }
+    };
+
+    // 开始
+    fn();
+
+  });
+
+}
+```
+
+#### 对有符号整型、无符号整型、浮点型、十六进制、二进制的数据处理
+
+参考：https://www.cnblogs.com/zhouheblog/p/13578012.html
+
+```javascript
+// 十六进制字符串转有符号整型（支持 S8、S16、S32）
+function hexToInt(hex) {
+  if (!hex) {
+    return NaN;
+  }
+  if (hex.length % 2 !== 0) {
+    hex = '0' + hex;
+  }
+  let num = parseInt(hex, 16);
+  let max = Math.pow(2, hex.length / 2 * 8);
+  if (num > max / 2 - 1) {
+    num = num - max;
+  }
+  return num;
+}
+```
+
+```javascript
+// 十六进制字符串转无符号整型（支持 U8、U16、U32）
+parseInt(str, 16);
+```
+
+```javascript
+/**
+ * @description 合并对象（lodash.mergeWith）
+ * - 将会修改目标对象
+ * - 若来源属性为数组，将会直接替换
+ * - 若目标属性为对象，但来源属性为 `null`，则跳过
+ * @template TObject
+ * @param   {TObject} obj 合并目标
+ * @param   {TObject} src 合并来源
+ * @returns {TObject}
+ */
+function mergeObject(obj, src) {
+  return mergeWith(obj, src, function (objValue, srcValue) {
+    if (Array.isArray(srcValue)) {
+      return srcValue;
+    } else if (srcValue === null && isObject(objValue)) {
+      return objValue;
+    }
+  });
 }
 ```
 
@@ -679,3 +846,72 @@ function strToFile(data = '', filename = 'export.txt', filetype = 'text/plain') 
 ```
 
 ‍
+
+#### 转换 JSON 为 SQLite 插入语句
+
+```javascript
+/**
+ * @description 生成 SQLite 插入语句
+ * @param {string}            t 表名
+ * @param {string[]}          k 键名列表
+ * @param {(number|string)[]} v 值列表
+ */
+function getSqlInsert(t, k, v) {
+  k = k.map(val => `"${val}"`);
+  v = v.map(val => (val === null ? 'NULL' : `'${val}'`));
+  return `INSERT INTO "${t}" (${k.join(', ')}) VALUES (${v.join(', ')})`;
+}
+
+/**
+ * @description 转换 JSON 为 SQLite 语句（INSERT）
+ * @param {string} table 表名
+ * @param {Record<string, number|string>[]} data
+ * @param {string[]} [keys] 属性过滤
+ */
+function jsonToSql(table, data, keys) {
+  try {
+
+    const result = [];
+    const filter = Array.isArray(keys);
+
+    if (!table) {
+      throw new Error('缺少 table 参数');
+    }
+
+    if (!Array.isArray(data)) {
+      throw new Error('缺少 data 参数');
+    }
+
+    for (let i = 0; i < data.length; i++) {
+      let item = data[i];
+      let keys = [];
+      let values = [];
+      let sql = '';
+      // 记录 key 和 value
+      if (filter) {
+        for (let key in item) {
+          if (keys.includes(key)) {
+            keys.push(key);
+            values.push(item[key]);
+          }
+        }
+      } else {
+        for (let key in item) {
+          keys.push(key);
+          values.push(item[key]);
+        }
+      }
+      // 生成 SQL 插入语句
+      sql = getSqlInsert(table, keys, values);
+      result.push(sql);
+    }
+
+    return result;
+
+  } catch (error) {
+    console.error('转换失败：');
+    console.error(error);
+    return null;
+  }
+}
+```

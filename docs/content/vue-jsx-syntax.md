@@ -1,5 +1,5 @@
 ---
-title: 「Web 前端」在 Vue 中使用 JSX 的语法
+title: "「Web 前端」在 Vue 中使用 JSX 的语法"
 date: 2025-03-15T23:05:31Z
 lastmod: 2025-10-07T16:10:57Z
 tags: [Web 前端,JavaScript,JSX,Vue.js]

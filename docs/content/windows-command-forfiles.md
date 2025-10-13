@@ -1,5 +1,5 @@
 ---
-title: Windows forfiles 命令
+title: "Windows forfiles 命令"
 date: 2025-03-16T16:07:42Z
 lastmod: 2025-03-16T16:08:11Z
 tags: [Windows,命令,命令提示符]
@@ -94,11 +94,11 @@ FORFILES /S /C "cmd /C ECHO @relpath"
 FORFILES /P <文件路径> /M <搜索掩码> /S /C "cmd /C IF @isdir==FALSE DEL @path /F /Q" /D <文件日期>
 ```
 
->  **&lt;文件路径&gt;**  示例：`"D:\Example\Folder"`、`".\Example\Folder"`​
+>  **&lt;文件路径&gt;**  示例：`"D:\Example\Folder"`​、`".\Example\Folder"`
 >
->  **&lt;搜索掩码&gt;**  示例：`*.exe`、`*.png`、`*.txt`​
+>  **&lt;搜索掩码&gt;**  示例：`*.exe`​、`*.png`​、`*.txt`
 >
->  **&lt;文件日期&gt;**  示例：`-100`（100 天前）、`-200`（200 天前）、`-365`（365 天前）
+>  **&lt;文件日期&gt;**  示例：`-100`​（100 天前）、`-200`​（200 天前）、`-365`（365 天前）
 
 ## 相关链接
 

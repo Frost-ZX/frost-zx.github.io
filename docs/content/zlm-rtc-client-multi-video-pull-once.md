@@ -1,5 +1,5 @@
 ---
-title: 通过画布（Canvas）实现 ZLMRTCClient 同一视频流多次显示时只拉取一次
+title: "通过画布（Canvas）实现 ZLMRTCClient 同一视频流多次显示时只拉取一次"
 date: 2025-02-11T20:55:33Z
 lastmod: 2025-02-12T09:50:12Z
 tags: [Web 前端,JavaScript,视频流]
@@ -22,7 +22,7 @@ tags: [Web 前端,JavaScript,视频流]
 ### ZLMRTCClient.js
 
 > 当前使用的版本：  
-> ​`1.0.1` `Mon Mar 27 2023 19:11:59 GMT+0800`​
+> ​`1.0.1`​ `Mon Mar 27 2023 19:11:59 GMT+0800`
 
 首先需要修改 ZLMRTCClient.js 的代码，解决由于网络导致播放失败时无法触发 `WEBRTC_OFFER_ANWSER_EXCHANGE_FAILED` 事件的问题。
 
@@ -411,4 +411,4 @@ export function timerStop() {
 JAVASCRIPT 折叠 复制 全屏
 ```
 
-使用时只需要调用 `getVideoCanvas()` 获取 `canvas`，然后插入到 DOM 即可，画布会自适应父元素宽高。
+使用时只需要调用 `getVideoCanvas()`​ 获取 `canvas`，然后插入到 DOM 即可，画布会自适应父元素宽高。

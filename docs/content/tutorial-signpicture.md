@@ -1,5 +1,5 @@
 ---
-title: 「Minecraft」SignPicture（告示牌图片）教程
+title: "「Minecraft」SignPicture（告示牌图片）教程"
 date: 2025-03-16T22:18:01Z
 lastmod: 2025-03-16T22:19:24Z
 tags: [Minecraft,模组,教程]
@@ -10,7 +10,7 @@ tags: [Minecraft,模组,教程]
 ## 对于网络图片
 
 1. 获取图片链接。
-2. 若链接长度较长，需要使用 `短链接服务` 把链接缩短（[例](https://tinyurl.com/)）。  
+2. 若链接长度较长，需要使用 `短链接服务`​ 把链接缩短（[例](https://tinyurl.com/)）。  
 
     若链接长度较短，则直接到第 3 步。
 3. 在游戏中按下打开告示牌图片 GUI 的按键（默认是 `\`）。
@@ -25,7 +25,7 @@ tags: [Minecraft,模组,教程]
 1. 寻找合适的图床（[例](https://sm.ms/)）。
 2. 把图片上传至图床。
 3. 获取图片链接。
-4. 若链接长度较长，需要使用 `短链接服务` 把链接缩短（[例](https://tinyurl.com/)）。  
+4. 若链接长度较长，需要使用 `短链接服务`​ 把链接缩短（[例](https://tinyurl.com/)）。  
 
     若链接长度较短，则直接到第 5 步。
 5. 在游戏中按下打开告示牌图片 GUI 的按键（默认是 `\`）。
@@ -41,6 +41,6 @@ tags: [Minecraft,模组,教程]
 
 若需要使用资源包中的图片，可以将格式为 `!命名空间:文件名` 的文本作为图片链接在 SignPicture 中使用。
 
-例如图片文件在资源包中的路径为 `/assets/image_pack/frost-zx.png`，则对应的链接文本为 `!image_pack:frost-zx.png`。
+例如图片文件在资源包中的路径为 `/assets/image_pack/frost-zx.png`​，则对应的链接文本为 `!image_pack:frost-zx.png`。
 
 ‍

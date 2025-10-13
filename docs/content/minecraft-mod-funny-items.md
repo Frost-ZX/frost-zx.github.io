@@ -1,5 +1,5 @@
 ---
-title: 「Minecraft」Funny Items Mod
+title: "「Minecraft」Funny Items Mod"
 date: 2025-03-16T18:41:35Z
 lastmod: 2025-03-16T18:44:20Z
 tags: [Minecraft,模组]
@@ -42,7 +42,7 @@ TNT（原版） + 铁粒
 
 **合成表**（有序合成）
 
-羽毛(原版) + 末影珍珠 `4`  
+羽毛(原版) + 末影珍珠 `4`​  
 ​![合成表](assets/network-asset-recipe-rightclick-to-fly-20250316184209-08yqxu4.png)
 
 **可配置项**
@@ -94,7 +94,7 @@ TNT（原版） + 铁粒
 
 **合成表**（有序合成）
 
-火药 + 铁锭 `4`  
+火药 + 铁锭 `4`​  
 ​![合成表](assets/network-asset-recipe-hand-grenade-20250316184209-t0om6f6.png)
 
 **可配置项**
@@ -103,7 +103,7 @@ TNT（原版） + 铁粒
 
 #### 铁剑（异常）
 
-> 攻击 `生物` 后，随机给予 `生物` 随机的 `伤害值` 或 `生命值`。
+> 攻击 `生物`​ 后，随机给予 `生物`​ 随机的 `伤害值`​ 或 `生命值`。
 
 **耐久度**
 
@@ -120,7 +120,7 @@ TNT（原版） + 铁粒
 
 #### 钻石剑（异常）
 
-> 攻击 `生物` 后，随机给予 `生物` 随机的 `伤害值` 或 `生命值`。
+> 攻击 `生物`​ 后，随机给予 `生物`​ 随机的 `伤害值`​ 或 `生命值`。
 
 **耐久度**
 
@@ -187,21 +187,21 @@ TNT（原版） + 铁粒
 
 - ​`/funnyitems get`  
   获取当前配置。
-- ​`/funnyitems reset`  
+- ​`/funnyitems reset`​  
   重置配置（第一次使用或更新后如果发现有配置值为 0，最好执行一次，或手动将其 `set` 为默认值以免出现问题）。
-- ​`/funnyitems set AttackRandomDiamond_Max <数值>`  
+- ​`/funnyitems set AttackRandomDiamond_Max <数值>`​  
   修改 `钻石剑（异常）` 的随机值的最大值（默认值 14）。
-- ​`/funnyitems set AttackRandomIron_Max <数值>`  
+- ​`/funnyitems set AttackRandomIron_Max <数值>`​  
   修改 `铁剑（异常）` 的随机值的最大值（默认值 12）。
-- ​`/funnyitems set DiamondExplode_Power <数值>`  
+- ​`/funnyitems set DiamondExplode_Power <数值>`​  
   修改 `钻石` 的爆炸威力（默认值 4）。
-- ​`/funnyitems set HandGrenade_Power <数值>`  
+- ​`/funnyitems set HandGrenade_Power <数值>`​  
   修改 `手榴弹` 的爆炸威力（默认值 4）。
-- ​`/funnyitems set SteveExplode_Power <数值>`  
+- ​`/funnyitems set SteveExplode_Power <数值>`​  
   修改 `炸弹人` 的爆炸威力（默认值 2）。
-- ​`/funnyitems set TNTA_Power <数值>`  
+- ​`/funnyitems set TNTA_Power <数值>`​  
   修改 `TNT` 的爆炸威力（默认值 4）。
-- ​`/funnyitems set ToSky_High <数值>`  
+- ​`/funnyitems set ToSky_High <数值>`​  
   修改 `羽毛` 的传送高度差（默认值 100）。
 
 ‍

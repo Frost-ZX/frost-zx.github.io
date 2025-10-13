@@ -1,5 +1,5 @@
 ---
-title: 「教程」在 Termux 中安装任意版本的 JDK
+title: "「教程」在 Termux 中安装任意版本的 JDK"
 date: 2025-03-16T15:43:12Z
 lastmod: 2025-03-16T15:45:51Z
 tags: [教程,Android,Java,JDK,Termux]
@@ -31,9 +31,9 @@ tags: [教程,Android,Java,JDK,Termux]
 ## 启动 Termux & 安装相关的软件包
 
 1. 启动 Termux，等待初始化完成（仅在第一次启动时）。
-2. 执行 `pkg update` 命令，更新软件包信息。  
+2. 执行 `pkg update`​ 命令，更新软件包信息。  
     可能会出现类似这样的提示，如果没有手动修改过提示中的文件，  
-    可以输入 `Y`，否则输入 `N`，然后点击 `ENTER`。  
+    可以输入 `Y`​，否则输入 `N`​，然后点击 `ENTER`​。  
     ​![初始化](assets/network-asset-pkg_update-20250316154503-v6p17lv.jpg "初始化")
 3. 执行 `pkg install openssl-tool proot vim wget -y` 命令，安装4个软件包。
 
@@ -48,13 +48,13 @@ tags: [教程,Android,Java,JDK,Termux]
     ​![在线安装](assets/network-asset-A01_AnLinux_Panel-20250316154503-5qp14m5.jpg "在线安装")
 2. 复制软件给出的安装命令。  
     ​![在线安装](assets/network-asset-A02_AnLinux_Ubuntu-20250316154503-pqddget.jpg "在线安装")
-3. 在 Termux 中执行 `cd ~` 命令，切换工作目录到 `home` 文件夹。  
+3. 在 Termux 中执行 `cd ~`​ 命令，切换工作目录到 `home`​ 文件夹。  
     然后粘贴复制的命令，等待脚本自动完成安装操作。  
     如果网络状况不稳定，可能会出现安装失败或文件下载失败的情况。  
-    一般来说，如果在输出的内容中已经出现 `Resolving...`、`Connecting...` 之类的提示，则表示命令前方部分的 `pkg install` 部分已执行成功，但在后方部分的 `wget` 下载安装脚本或 Rootfs 文件的过程中出现错误。  
+    一般来说，如果在输出的内容中已经出现 `Resolving...`​、`Connecting...`​ 之类的提示，则表示命令前方部分的 `pkg install`​ 部分已执行成功，但在后方部分的 `wget`​ 下载安装脚本或 Rootfs 文件的过程中出现错误。  
     ​![在线安装](assets/network-asset-A03_1_fail-20250316154503-31kfbli.jpg "在线安装")  
     ​![在线安装](assets/network-asset-A03_2_fail-20250316154503-jiwqkc3.jpg "在线安装")  
-    如果文件下载失败（输出的内容中有类似 `Connection timed out`、`Unable to establish connection`、`Unexpected EOF in archive` 的提示），则执行 `ls -a` 命令，查看是否存在 `start-ubuntu.sh`、`ubuntu.sh`、`ubuntu-rootfs.tar.gz`、`ubuntu-binds`、`ubuntu-fs` 这几个文件（文件夹）。如果存在则执行 `rm -rf <文件名>` 命令将其删除（也可以直接执行 `rm -rf *ubuntu*` 命令），才能再次执行复制的命令，否则可能会被误认为文件已经下载完成或出现其他问题。  
+    如果文件下载失败（输出的内容中有类似 `Connection timed out`​、`Unable to establish connection`​、`Unexpected EOF in archive`​ 的提示），则执行 `ls -a`​ 命令，查看是否存在 `start-ubuntu.sh`​、`ubuntu.sh`​、`ubuntu-rootfs.tar.gz`​、`ubuntu-binds`​、`ubuntu-fs`​ 这几个文件（文件夹）。如果存在则执行 `rm -rf <文件名>`​ 命令将其删除（也可以直接执行 `rm -rf *ubuntu*`​ 命令），才能再次执行复制的命令，否则可能会被误认为文件已经下载完成或出现其他问题。  
     ​![在线安装](assets/network-asset-A03_3_fail-20250316154504-pfofs04.jpg "在线安装")
 4. 如果文件下载完毕且安装成功，则会出现类似这样的提示：  
     ​![在线安装](assets/network-asset-A04_success-20250316154504-ae5ey2o.jpg "在线安装")
@@ -78,7 +78,7 @@ tags: [教程,Android,Java,JDK,Termux]
     >
 5. 进入 `Anlinux-Resources/Scripts/Installer/` 文件夹，下载对应系统的安装脚本。
 
-    > Ubuntu 系统的安装脚本路径为 `Anlinux-Resources/Scripts/Installer/Ubuntu/ubuntu.sh`。  
+    > Ubuntu 系统的安装脚本路径为 `Anlinux-Resources/Scripts/Installer/Ubuntu/ubuntu.sh`​。  
     > 本教程中使用的文件的更新日期为 **2020-01-15**。
     >
 
@@ -93,13 +93,13 @@ tags: [教程,Android,Java,JDK,Termux]
 9. 执行 `cp <源路径> <目标路径>` 命令，复制 Rootfs 文件和安装脚本到 Termux 中。
 
     > 注：  
-    > 执行 `cp` 命令前可以先执行 `cd` 命令切换工作目录；  
-    > 建议执行 `cd ~` 命令，回到 `home` 目录，方便后续操作。  
+    > 执行 `cp`​ 命令前可以先执行 `cd`​ 命令切换工作目录；  
+    > 建议执行 `cd ~`​ 命令，回到 `home`​ 目录，方便后续操作。  
     > 命令中的 `.` 表示执行命令时的工作目录。
     >
 
     ![离线安装](assets/network-asset-B09_copy_files-20250316154505-ewfiral.png "离线安装")
-10. 执行 `bash <安装脚本文件名>` 命令，调用脚本，安装系统。  
+10. 执行 `bash <安装脚本文件名>`​ 命令，调用脚本，安装系统。  
      ​![离线安装](assets/network-asset-B10_run_script-20250316154505-6sp5xib.jpg "离线安装")
 
 ## 进入 Ubuntu 系统
@@ -109,16 +109,16 @@ tags: [教程,Android,Java,JDK,Termux]
     > **建议修改，方便传输文件。**
     >
 
-    执行 `vim ~/start-ubuntu.sh` 命令，打开编辑器：  
+    执行 `vim ~/start-ubuntu.sh`​ 命令，打开编辑器：  
     ​![离线安装](assets/network-asset-B11_1_modify_script-20250316154506-vr52sud.jpg "离线安装")  
-    点击 `i` 键，进入插入模式，然后将第 20 行前的 `#` 删除（取消注释）：  
+    点击 `i`​ 键，进入插入模式，然后将第 20 行前的 `#`​ 删除（取消注释）：  
     ​![离线安装](assets/network-asset-B11_2_modify_script-20250316154506-hzyxqre.jpg "离线安装")  
-    点击 `ESC`，输入 `:wq`，点击 `ENTER`，保存并关闭文件：  
+    点击 `ESC`​，输入 `:wq`​，点击 `ENTER`​，保存并关闭文件：  
     ​![离线安装](assets/network-asset-B11_3_modify_script-20250316154506-jhkwc9m.jpg "离线安装")
 2. 然后就可以执行 `bash ~/start-ubuntu.sh` 命令，进入安装的 Ubuntu 系统了。
 
     > 注：  
-    > 如果当前的工作目录为 `home`，可以执行 `./start-ubuntu.sh`。  
+    > 如果当前的工作目录为 `home`​，可以执行 `./start-ubuntu.sh`。  
     > 下一次打开 Termux 时也是通过执行此命令进入 Ubuntu 系统。
     >
 
@@ -168,17 +168,17 @@ tags: [教程,Android,Java,JDK,Termux]
 
 1. 将下载好的 JDK 文件移动到任意位置放好（也可以不移动）。  
     ​![方式二](assets/network-asset-B05_move_file-20250316154507-umldi6l.png "方式二")
-2. 在 Termux 中执行 `cd` 命令切换工作目录（例如 `cd ~`）；  
-    然后执行 `mkdir <文件夹名称>` 命令创建用于放置 JDK 的文件夹；  
+2. 在 Termux 中执行 `cd`​ 命令切换工作目录（例如 `cd ~`​）；  
+    然后执行 `mkdir <文件夹名称>`​ 命令创建用于放置 JDK 的文件夹；  
     然后执行 `cd <文件夹名称>` 命令切换工作目录到创建的文件夹。
 3. 执行 `cp <源路径> <目标路径>` 命令，把下载的 JDK 文件复制到 Ubuntu 中。
 
-    > 例如 `cp /sdcard/Files/OpenJDK_16.tar.gz .`  
+    > 例如 `cp /sdcard/Files/OpenJDK_16.tar.gz .`​  
     > 注：`/sdcard` 为手机的内部储存挂载路径，需要修改 Ubuntu 启动脚本才能使用。
     >
 
     ![方式二](assets/network-asset-B06_copy_file-20250316154507-3i571xi.png "方式二")
-4. 执行 `tar -xzf <文件名>` 命令，解压文件。  
+4. 执行 `tar -xzf <文件名>`​ 命令，解压文件。  
     ​![方式二](assets/network-asset-B07_extract_file-20250316154507-xowa0v8.png "方式二")
 5. 执行 `mv <文件夹名称> <目标名称>` 命令，重命名 JDK 文件夹。
 
@@ -186,14 +186,14 @@ tags: [教程,Android,Java,JDK,Termux]
     >
 
     ![方式二](assets/network-asset-B08_rename_folder-20250316154508-nck7bmp.jpg "方式二")
-6. 执行 `cd <文件夹名称>/bin/` 命令，将工作目录切换到 JDK 的 `bin` 文件夹。  
-    然后执行 `ls -al` 命令，查看其中的文件是否有可执行权限（左侧的权限属性有三个 `x`）。  
+6. 执行 `cd <文件夹名称>/bin/`​ 命令，将工作目录切换到 JDK 的 `bin`​ 文件夹。  
+    然后执行 `ls -al`​ 命令，查看其中的文件是否有可执行权限（左侧的权限属性有三个 `x`​）。  
     一般情况下，该权限在 JDK 文件打包前已经被设置，解压时会自动识别。  
-    如果没有，可以在当前文件夹执行一次 `chmod +x *` 命令。  
+    如果没有，可以在当前文件夹执行一次 `chmod +x *`​ 命令。  
     ​![方式二](assets/network-asset-B09_check_permission-20250316154508-5znmk6q.png "方式二")
-7. 执行 `./java -version` 命令，测试是否能出现对应的版本号。  
+7. 执行 `./java -version`​ 命令，测试是否能出现对应的版本号。  
     ​![方式二](assets/network-asset-B10_test_command-20250316154508-luxyd8x.jpg "方式二")
-8. 执行 `vim ~/.bash_profile` 命令（也可以先 `cd ~` 再 `vim .bash_profile`），  
+8. 执行 `vim ~/.bash_profile`​ 命令（也可以先 `cd ~`​ 再 `vim .bash_profile`​），  
     打开“home”目录下的 `.bash_profile` 文件，设置环境变量。  
     默认情况下，应该没有这个文件，将会在保存后自动创建。
 
@@ -204,10 +204,10 @@ tags: [教程,Android,Java,JDK,Termux]
 
     ![方式二](assets/network-asset-B11_1_set_variables-20250316154508-15g0q87.jpg "方式二")  
     ​![方式二](assets/network-asset-B11_2_set_variables-20250316154508-h1fh5sm.jpg "方式二")
-9. 保存后，执行 `exit` 命令退出 Ubuntu 系统，  
-    然后再执行 `bash ~/start-ubuntu.sh` 命令，重新进入 Ubuntu 系统。  
+9. 保存后，执行 `exit`​ 命令退出 Ubuntu 系统，  
+    然后再执行 `bash ~/start-ubuntu.sh`​ 命令，重新进入 Ubuntu 系统。  
     ​![方式二](assets/network-asset-B12_restart_ubuntu-20250316154508-2czuiy6.jpg "方式二")
-10. 此时执行 `java -version` 命令，有显示对应的版本号则安装成功，否则检查环境变量是否设置正确。  
+10. 此时执行 `java -version`​ 命令，有显示对应的版本号则安装成功，否则检查环境变量是否设置正确。  
      ​![方式二](assets/network-asset-B13_jdk_version-20250316154509-szxns7p.jpg "方式二")
 
 ## 注意事项
@@ -225,7 +225,7 @@ tags: [教程,Android,Java,JDK,Termux]
 
 ### Ubuntu
 
-- 如果需要同时使用多个会话，可以安装 `screen` 软件包（`apt install screen`）。
+- 如果需要同时使用多个会话，可以安装 `screen`​ 软件包（`apt install screen`）。
 
 ### Vim 操作提示
 

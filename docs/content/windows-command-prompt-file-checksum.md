@@ -1,5 +1,5 @@
 ---
-title: Windows 通过命令提示符校验文件（MD5、SHA1等）
+title: "Windows 通过命令提示符校验文件（MD5、SHA1等）"
 date: 2025-03-16T18:30:47Z
 lastmod: 2025-03-16T18:33:57Z
 tags: [Windows,命令,命令提示符,校验,CertUtil]
@@ -23,7 +23,7 @@ CertUtil -hashfile 文件路径 [算法]
 
 ### 使用举例
 
-校验 `当前路径` 下的 `Test.zip` 的 MD5
+校验 `当前路径`​ 下的 `Test.zip` 的 MD5
 
 ```plaintext
 CertUtil -hashfile Test.zip MD5

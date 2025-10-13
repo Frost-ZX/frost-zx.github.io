@@ -1,5 +1,5 @@
 ---
-title: 浏览器 DevTools（开发人员工具）部分实用功能介绍
+title: "浏览器 DevTools（开发人员工具）部分实用功能介绍"
 date: 2025-03-16T15:54:20Z
 lastmod: 2025-03-16T15:58:30Z
 tags: [Chromium,Chrome,浏览器,工具,Web 前端,DevTools]
@@ -45,17 +45,17 @@ DevTools 的 Console 是在开发过程中常用的功能之一，在其中可�
 
 实际上，`$0` 是对当前选中的 DOM 节点的引用。
 
-除此之外，`$1` 是对上一次选择的 DOM 节点的引用，一直到 `$4`。
+除此之外，`$1`​ 是对上一次选择的 DOM 节点的引用，一直到 `$4`。
 
 ![](assets/network-asset-c-02-20250316155450-imayn8e.png)
 
 ### \$ 和 \$\$
 
-在默认情况下（没有定义过 `$` 变量），它在 Console 中是 `document.querySelector` 的别名。
+在默认情况下（没有定义过 `$`​ 变量），它在 Console 中是 `document.querySelector` 的别名。
 
 ![](assets/network-asset-c-03-20250316155450-w9czvqh.png)
 
-而 `$$` 则类似 `document.QuerySelectorAll`，但它返回的是包含 DOM 节点的数组，而不是 NodeList。
+而 `$$`​ 则类似 `document.QuerySelectorAll`，但它返回的是包含 DOM 节点的数组，而不是 NodeList。
 
 ![](assets/network-asset-c-04-20250316155450-ge91fnx.png)
 
@@ -91,8 +91,8 @@ DevTools 的 Console 是在开发过程中常用的功能之一，在其中可�
 
 ![](assets/network-asset-f-04-20250316155451-32iica5.png)
 
-Copy selector：`#head_wrapper > div > div`  
-Copy JS path：`document.querySelector("#head_wrapper > div > div")`​
+Copy selector：`#head_wrapper > div > div`​  
+Copy JS path：`document.querySelector("#head_wrapper > div > div")`
 
 ## Sources（源代码）
 
@@ -128,7 +128,7 @@ DevTools 代码片段合集：[DevTools Snippets](http://bgrins.github.io/devtoo
 
 ![](assets/network-asset-d-02-20250316155452-gdsmr1f.png)
 
-之后网页会被模拟为聚焦状态，即使它不在前台。此时执行 `document.hasFocus()` 会返回 `true`。通过该功能，可以阻止大部分网站检测用户是否离开页面。
+之后网页会被模拟为聚焦状态，即使它不在前台。此时执行 `document.hasFocus()`​ 会返回 `true`。通过该功能，可以阻止大部分网站检测用户是否离开页面。
 
 ## 截屏
 

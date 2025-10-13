@@ -1,5 +1,5 @@
 ---
-title: 「教程」Android 微软远程桌面客户端使用自定义分辨率
+title: "「教程」Android 微软远程桌面客户端使用自定义分辨率"
 date: 2025-03-16T15:48:43Z
 lastmod: 2025-03-16T15:50:59Z
 tags: [Windows,教程,Android,远程桌面]
@@ -11,7 +11,7 @@ tags: [Windows,教程,Android,远程桌面]
 
 通过远程桌面连接 Windows 时，不能在系统中修改分辨率，只能在连接远程桌面的工具中设置。
 
-对于 Windows 上的“远程桌面连接”工具，可在它的 `显示 - 显示配置` 中修改（只能选择给出的分辨率），也可以在远程桌面配置文件（`.rdp`）中修改（可以设置为任意合适的分辨率）。
+对于 Windows 上的“远程桌面连接”工具，可在它的 `显示 - 显示配置`​ 中修改（只能选择给出的分辨率），也可以在远程桌面配置文件（`.rdp`）中修改（可以设置为任意合适的分辨率）。
 
 而对于 Android 系统上的“RD Client”，只能选择它给出的分辨率（目前还不支持手动输入分辨率数值），且由于给出的分辨率与手机的分辨率相关，在全面屏手机上使用的时候会比较奇怪（例如不能设置为 16:9 的分辨率）。
 
@@ -37,7 +37,7 @@ tags: [Windows,教程,Android,远程桌面]
 
     ![截图](assets/network-asset-1_01_rdc_add-20250316154915-1rwvoe6.png "截图")
 3. 打开安装的 MiXplorer，授予 ROOT 权限。
-4. 进入路径 `/data/data/com.microsoft.rdc.androidx/databases`。  
+4. 进入路径 `/data/data/com.microsoft.rdc.androidx/databases`​。  
     ​![截图](assets/network-asset-1_02_file_path-20250316154915-w3z5ov1.png "截图")
 5. 使用 MiXplorer 的“SQLite Editor”工具打开文件夹中的 `RDPConnection.db` 文件。
 
@@ -45,7 +45,7 @@ tags: [Windows,教程,Android,远程桌面]
     >
 
     ![截图](assets/network-asset-1_03_open-20250316154916-m1ql94t.png "截图")
-6. 点击左上方的下拉菜单，切换到 `resolution_table` 项。  
+6. 点击左上方的下拉菜单，切换到 `resolution_table`​ 项。  
     此时可以看到刚刚在 RD Client 中添加的几个分辨率项。  
     ​![截图](assets/network-asset-1_04_table-20250316154916-4boacd2.png "截图")
 7. 长按需要修改的项进行编辑，点击“UPDATE”保存。  
@@ -69,7 +69,7 @@ tags: [Windows,教程,Android,远程桌面]
 2. 解压下载的 ADB 工具包（文件路径最好不包含中文）。
 3. 启动“命令提示符”（CMD），执行 `CD /D 文件夹路径` 命令，将工作目录切换到 ADB 工具所在的文件夹。
 
-    > 例如 `CD /D D:\Development\adb`​
+    > 例如 `CD /D D:\Development\adb`
     >
 4. 使用 USB 数据线将手机与电脑连接。
 5. 在手机系统的“开发者选项”中开启“USB 调试”。  
@@ -83,17 +83,17 @@ tags: [Windows,教程,Android,远程桌面]
     List of devices attached
     2ab5d50e    device
     ```
-7. 执行 `adb shell` 命令，进入 Shell 环境。  
+7. 执行 `adb shell`​ 命令，进入 Shell 环境。  
     ​![截图](assets/network-asset-2_03_adb_shell-20250316154917-0wv5gpl.png "截图")
-8. 执行 `wm size` 命令，查看和记下设备的**默认分辨率**，还原的时候会用到。  
+8. 执行 `wm size`​ 命令，查看和记下设备的**默认分辨率**，还原的时候会用到。  
     ​![截图](assets/network-asset-2_04_original_size-20250316154917-xxth547.png "截图")
 9. 执行 `wm size 宽x高` 命令，设置想要在远程桌面中使用的分辨率。
 
-    > “宽”和“高”对应手机竖屏状态下的数值（请参考默认分辨率），例如 `wm size 1080x1920`。  
+    > “宽”和“高”对应手机竖屏状态下的数值（请参考默认分辨率），例如 `wm size 1080x1920`​。  
     > 不建议设置过大或过小的分辨率，以免导致系统出错。  
     > 执行命令前，请务必**检查确认无误**。  
     > 执行命令后，**手机的分辨率会变为指定的值**。  
-    > 如果不小心设置错了，可以尝试执行 `wm size reset` 或 `wm size 默认分辨率` 命令进行还原。
+    > 如果不小心设置错了，可以尝试执行 `wm size reset`​ 或 `wm size 默认分辨率` 命令进行还原。
     >
 
     ![截图](assets/network-asset-2_05_1_wm_size-20250316154917-ilz94fw.png "截图")
@@ -112,12 +112,12 @@ tags: [Windows,教程,Android,远程桌面]
      ​![截图](assets/network-asset-2_07_2_app-20250316154918-oseljk6.jpg "截图")  
      ​![截图](assets/network-asset-2_08_1_wm_size-20250316154918-s58a8az.png "截图")  
      ​![截图](assets/network-asset-2_08_2_app-20250316154918-28ql07i.jpg "截图")
-14. 保存完所有需要的分辨率后，执行 `wm size reset` 或 `wm size 默认分辨率` 命令，把手机的分辨率还原为默认值。
+14. 保存完所有需要的分辨率后，执行 `wm size reset`​ 或 `wm size 默认分辨率` 命令，把手机的分辨率还原为默认值。
 15. 重新打开客户端，保存的分辨率都在，且有效果。  
      ​![截图](assets/network-asset-2_09_app-20250316154918-8s0r8ec.jpg "截图")
-16. 执行 `exit` 命令，退出 Shell 环境。  
+16. 执行 `exit`​ 命令，退出 Shell 环境。  
      ​![截图](assets/network-asset-2_10_exit-20250316154918-nu3c97e.png "截图")
-17. 执行 `adb kill-server` 命令，结束 ADB 服务。  
+17. 执行 `adb kill-server`​ 命令，结束 ADB 服务。  
      ​![截图](assets/network-asset-2_11_kill_server-20250316154918-o1l309g.png "截图")
 18. 现在可以关闭 USB 调试，然后断开手机与电脑的连接了。
 

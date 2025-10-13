@@ -1,5 +1,5 @@
 ---
-title: HTML5 使用 FileReader 读取并预览文件内容
+title: "HTML5 使用 FileReader 读取并预览文件内容"
 date: 2025-03-16T18:26:17Z
 lastmod: 2025-03-16T18:27:48Z
 tags: [代码片段,HTML5,JavaScript,Web 前端]

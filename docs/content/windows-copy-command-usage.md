@@ -1,5 +1,5 @@
 ---
-title: Windows copy 命令的妙用（文件里藏文件、合并文件）
+title: "Windows copy 命令的妙用（文件里藏文件、合并文件）"
 date: 2025-03-22T22:47:31Z
 lastmod: 2025-03-29T18:30:31Z
 tags: [Windows,命令,命令提示符]
@@ -15,8 +15,8 @@ tags: [Windows,命令,命令提示符]
 
 ## 本教程中的命令格式
 
-- ​`copy /B 文件名1+文件名2 合并后的文件名`​
-- ​`copy /B *.扩展名 合并后的文件名`​
+- ​`copy /B 文件名1+文件名2 合并后的文件名`
+- ​`copy /B *.扩展名 合并后的文件名`
 
 ## 使用前准备
 
@@ -31,7 +31,7 @@ tags: [Windows,命令,命令提示符]
 3. 依次点击“文件”->“运行新任务”
 
     ![](assets/network-asset-093fdf1667a63580d5f567eb42b9d4d9bdef895d-20250322225306-4p3zlsx.png)
-4. 输入 `cmd`，勾选“以系统管理权限创建此任务”，按下 `Enter`（回车）键
+4. 输入 `cmd`​，勾选“以系统管理权限创建此任务”，按下 `Enter`（回车）键
 
     ![](assets/network-asset-656fc603f1472b34ba2b61a46455b62301522103-20250322225306-8q8fkna.png)
 
@@ -53,9 +53,9 @@ tags: [Windows,命令,命令提示符]
 
 3. 使用 `cd /D` 命令 切换到第 2 步的文件夹
 
-    例如我第2步的文件夹在 `D:\Files\Desktop\教程-命令提示符-copy`​
+    例如我第2步的文件夹在 `D:\Files\Desktop\教程-命令提示符-copy`
 
-    则执行命令 `cd /D D:\Files\Desktop\教程-命令提示符-copy`​
+    则执行命令 `cd /D D:\Files\Desktop\教程-命令提示符-copy`
 
     看到左侧显示切换后的路径则更改成功​
 
@@ -63,13 +63,13 @@ tags: [Windows,命令,命令提示符]
 
 4. 使用 `copy /B` 命令 合并文件
 
-    命令格式：`copy /B 压缩包名+用于藏文件的文件的文件名 合并后的文件名`​
+    命令格式：`copy /B 压缩包名+用于藏文件的文件的文件名 合并后的文件名`
 
     文件的顺序不能错，否则合并后的文件无法正常打开
 
-    例如我的压缩包名为 `Files.zip`，用于藏文件的文件的文件名为 `Picture.png`​
+    例如我的压缩包名为 `Files.zip`​，用于藏文件的文件的文件名为 `Picture.png`
 
-    则执行命令 `copy /B Picture.png+Files.zip Picture-Merge.png`​
+    则执行命令 `copy /B Picture.png+Files.zip Picture-Merge.png`
 
     ![](assets/network-asset-2a0eb7a467fa83ad163d891247f1085d2acf4ecb-20250322225307-61zkyk9.png)
 
@@ -79,7 +79,7 @@ tags: [Windows,命令,命令提示符]
 
     用于藏文件的文件的文件名与合并后的文件名的扩展名需要相同，但前缀名不能相同
 
-    例如 `Picture.png` 与 `Picture-Merge.png`​
+    例如 `Picture.png`​ 与 `Picture-Merge.png`
 
 ## 提取隐藏的文件
 
@@ -89,9 +89,9 @@ tags: [Windows,命令,命令提示符]
 
     ![](assets/network-asset-c87cca41e892c2efb3f7a88b7e8bd6cfab69cc10-20250322225308-0eosuty.png)
 
-2. 在文件名后方加上 `.zip`​
+2. 在文件名后方加上 `.zip`
 
-    例如 `Picture-Merge.png` 改为 `Picture-Merge.png.zip`​
+    例如 `Picture-Merge.png`​ 改为 `Picture-Merge.png.zip`
 
     ![](assets/network-asset-238df0b3448a6d039f5c0c6ca110b7ca18424166-20250322225308-mhd4bcl.png)
 
@@ -109,17 +109,17 @@ tags: [Windows,命令,命令提示符]
 
 1. 把视频文件放于同一文件夹内
 
-2. 视频文件的文件名需为 `序号.扩展名`​
+2. 视频文件的文件名需为 `序号.扩展名`
 
-    例如 `001.mp4 002.mp4 003.mp4 004.mp4 ......`​
+    例如 `001.mp4 002.mp4 003.mp4 004.mp4 ......`
 
     序号不能错，否则合并的视频内容会出错。
 
 3. 使用 `cd /D` 命令 切换到要第 1 步的文件夹
 
-    例如我第 1 步的文件夹在 `D:\Files\Desktop\教程-命令提示符-copy`​
+    例如我第 1 步的文件夹在 `D:\Files\Desktop\教程-命令提示符-copy`
 
-    则执行命令 `cd /D D:\Files\Desktop\教程-命令提示符-copy`​
+    则执行命令 `cd /D D:\Files\Desktop\教程-命令提示符-copy`
 
     看到左侧显示切换后的路径则更改成功​
 
@@ -127,11 +127,11 @@ tags: [Windows,命令,命令提示符]
 
 4. 使用 `copy /B 命令` 合并文件
 
-    命令格式：`copy /B *.扩展名 合并后的文件名`​
+    命令格式：`copy /B *.扩展名 合并后的文件名`
 
-    例如我的分段视频文件名为 `Test_001.mp4 Test_002.mp4 Test_003.mp4 Test_004.mp4 ......`​
+    例如我的分段视频文件名为 `Test_001.mp4 Test_002.mp4 Test_003.mp4 Test_004.mp4 ......`
 
-    则执行命令 `copy /B Test_*.mp4 Merge.mp4`​
+    则执行命令 `copy /B Test_*.mp4 Merge.mp4`
 
     ![](assets/network-asset-dcc928943584c1208aedb29c24af9cd602ed4c21-20250322225310-h4g4rip.png)
 

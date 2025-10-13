@@ -1,5 +1,5 @@
 ---
-title: 「合集」Windows BAT  CMD 常用命令
+title: "「合集」Windows BAT  CMD 常用命令"
 date: 2025-03-16T15:47:13Z
 lastmod: 2025-03-16T15:47:31Z
 tags: [合集,Windows,命令提示符,命令,BAT,脚本]
@@ -84,7 +84,7 @@ ping -n 次数 主机名
 
 #### Ping 指定的主机，直到停止
 
-> 按下 `Ctrl + Break` 查看统计信息并继续操作；  
+> 按下 `Ctrl + Break`​ 查看统计信息并继续操作；  
 > 按下 `Ctrl + C` 以停止。
 
 ```bat

@@ -1,5 +1,5 @@
 ---
-title: 解决 Windows 10 提示“无法登录到你的账户”问题
+title: "解决 Windows 10 提示“无法登录到你的账户”问题"
 date: 2025-03-15T22:24:21Z
 lastmod: 2025-03-15T22:26:43Z
 tags: [系统,Windows,Windows 10]
@@ -19,11 +19,11 @@ tags: [系统,Windows,Windows 10]
 - 使用 “系统还原” 功能回滚到 “还原点”（无法进行，“系统还原” 功能没有开启）。
 - 重启，进入安全模式登录。
 - 打开注册表 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList`，将末尾带 “.bak” 的项和不带 “.bak” 的同名项重命名互换。
-- 打开注册表 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList`，将当前用户项中的 `State` 属性值改为 `0`。
+- 打开注册表 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList`​，将当前用户项中的 `State`​ 属性值改为 `0`。
 
 但是都没有效果，登录之后还是弹出错误提示。
 
-之后看到官方帮助文档里说创建一个新的账户，然后把文件复制到新账户的文件夹里可以解决，就试了下（开始之前先用虚拟机测试过一次），确实有效果，而且大部分软件的数据都在（小部分保存在注册表 `HKEY_CURRENT_USER` 里的不能恢复，据说这部分数据保存在 `NTUSER.DAT`）。
+之后看到官方帮助文档里说创建一个新的账户，然后把文件复制到新账户的文件夹里可以解决，就试了下（开始之前先用虚拟机测试过一次），确实有效果，而且大部分软件的数据都在（小部分保存在注册表 `HKEY_CURRENT_USER`​ 里的不能恢复，据说这部分数据保存在 `NTUSER.DAT`）。
 
 ## 官方帮助文档
 
@@ -35,7 +35,7 @@ tags: [系统,Windows,Windows 10]
 > 注意：  
 > 步骤与官方帮助文档中的不完全一致。  
 > 对于不同的情况，该方法不一定有效。  
-> 本文中的**原账户**用户名为 `my-user`，**新账户**用户名为 `temp-user`。
+> 本文中的**原账户**用户名为 `my-user`​，**新账户**用户名为 `temp-user`。
 
 ### 一、创建新的本地帐户并设置为管理员
 
@@ -56,15 +56,15 @@ tags: [系统,Windows,Windows 10]
 
 1. 右键任务栏中的 “Windows” 图标，点击 “运行”，输入 “regedit”，然后点击 “确定”。
 2. 在注册表编辑器的地址栏中输入 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon`，按下回车键（Enter）。
-3. 双击 `DefaultUserName` 项，输入新账户的用户名，然后点击 “确定”。  
+3. 双击 `DefaultUserName`​ 项，输入新账户的用户名，然后点击 “确定”。  
     ​![注册表编辑器](assets/network-asset-regedit-defaultusername-20250315222637-sr47gip.png "注册表编辑器")
 4. 关闭注册表编辑器。
 
 ### 二、将原账户的用户数据文件夹移动到其它地方
 
-1. 打开 `C:\Users` 文件夹，右键点击名称为**原账户**用户名的文件夹，点击 “剪切”（或使用快捷键 `Ctrl + X`）。  
+1. 打开 `C:\Users`​ 文件夹，右键点击名称为**原账户**用户名的文件夹，点击 “剪切”（或使用快捷键 `Ctrl + X`​）。  
     ​![剪切](assets/network-asset-user-data-cut-20250315222637-f2o5a0x.png "剪切")
-2. 打开用于放置该文件夹的目录，右键点击空白处，选择 “粘贴”（或使用快捷键 `Ctrl + V`）。  
+2. 打开用于放置该文件夹的目录，右键点击空白处，选择 “粘贴”（或使用快捷键 `Ctrl + V`​）。  
     ​![粘贴](assets/network-asset-user-data-paste-20250315222637-8x3flj0.png "粘贴")  
     若提示 “你需要提供管理员权限才能移动此文件夹”，则点击 “继续”。  
     ​![权限](assets/network-asset-user-data-permission-20250315222638-cu41iou.png "权限")
@@ -110,17 +110,17 @@ tags: [系统,Windows,Windows 10]
 1. 重启系统，登录**新账户**（确保系统启动后初次登录的是**新账户**）。
 2. 打开资源管理器，在 “显示 / 隐藏” 中勾选 “隐藏的项目”。  
     ​![显示隐藏的项目](assets/network-asset-explorer-show-hidden-items-20250315222638-qo64e3c.png "显示隐藏的项目")
-3. 打开 `C:\Users` 文件夹，进入名称为**原账户**用户名的文件夹（以下称为 `user_data`）。  
+3. 打开 `C:\Users`​ 文件夹，进入名称为**原账户**用户名的文件夹（以下称为 `user_data`​）。  
     若提示 “你当前无权限访问该文件夹。单击‘继续’获取永久访问该文件夹的权限。”，则点击 “是”。  
     ​![文件夹权限](assets/network-asset-folder-permission-20250315222638-q4sv7jn.png "文件夹权限")
 4. 打开 “第二步” 中移动的用户数据文件夹（以下称为 `backup_data`）。
-5. 将 `backup_data` 中的文件夹和文件依次移动到 `user_data` 中。  
+5. 将 `backup_data`​ 中的文件夹和文件依次移动到 `user_data`​ 中。  
     **注意**  
-    不需要移动文件名以 `ntuser` 或 `NTUSER` 开头的文件。  
+    不需要移动文件名以 `ntuser`​ 或 `NTUSER`​ 开头的文件。  
     ​![ntuser](assets/network-asset-ntuser-files-20250315222639-1xlzxem.png "ntuser")  
     不需要移动图标左下角带箭头的隐藏文件夹。  
     ​![箭头文件夹](assets/network-asset-linked-folders-20250315222639-ejwvemn.png "箭头文件夹")  
-    移动文件夹前需要先把 `user_data` 中对应的文件夹删除。  
+    移动文件夹前需要先把 `user_data`​ 中对应的文件夹删除。  
     若文件夹中没有实际的文件，可以不移动。  
     ​![空文件夹](assets/network-asset-empty-folder-20250315222639-8gpgu8t.png "空文件夹")
 

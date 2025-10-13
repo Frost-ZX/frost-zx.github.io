@@ -1,5 +1,5 @@
 ---
-title: QQ 宠物 HTML5 版
+title: "QQ 宠物 HTML5 版"
 date: 2025-03-16T22:20:29Z
 lastmod: 2025-03-16T22:21:35Z
 tags: [QQ,网站,链接]
@@ -15,7 +15,7 @@ tags: [QQ,网站,链接]
 
 本页面仅支持横屏完整查看。
 
-此处为 `iframe` 引用，点击前往 [原页面](http://ossweb-img.qq.com/images/MF/qqpet/index.html)。
+此处为 `iframe`​ 引用，点击前往 [原页面](http://ossweb-img.qq.com/images/MF/qqpet/index.html)。
 
 ---
 

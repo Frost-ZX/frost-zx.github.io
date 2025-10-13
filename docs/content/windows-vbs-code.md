@@ -1,5 +1,5 @@
 ---
-title: 「合集」VBS 代码
+title: "「合集」VBS 代码"
 date: 2025-03-16T22:03:27Z
 lastmod: 2025-03-16T22:06:33Z
 tags: [合集,Windows,VBS,脚本,代码片段]
@@ -31,15 +31,15 @@ WshShell.SendKeys "按键"
 
 一般来说，要发送的按键都可以直接用该按键字符本身来表示：
 
-> 发送字母 `X`，用 `WshShell.SendKeys "X"`。
+> 发送字母 `X`​，用 `WshShell.SendKeys "X"`。
 
 也可直接发送多个按键指令，只需要将按键字符按顺序排列在一起即可：
 
-> 发送按键 `Test`，用 `WshShell.SendKeys "Test"`。
+> 发送按键 `Test`​，用 `WshShell.SendKeys "Test"`。
 
 **2. 特殊功能键**
 
-对于需要与 `Shift`、`Ctrl`、`Alt` 三个控制键组合的按键，SendKeys 使用特殊字符来表示：
+对于需要与 `Shift`​、`Ctrl`​、`Alt` 三个控制键组合的按键，SendKeys 使用特殊字符来表示：
 
 |按键|代码|
 | :------| :----------------------|
@@ -49,26 +49,26 @@ WshShell.SendKeys "按键"
 
 > 注意：这样使用时，不需要使用 `大括号` 括起这些特殊字符。
 
-由于 `+`、`^` 这些字符用来表示特殊的控制按键，所以如果要表示这些 `字符` 的按键，要用 `大括号` 括住这些字符：
+由于 `+`​、`^`​ 这些字符用来表示特殊的控制按键，所以如果要表示这些 `字符`​ 的按键，要用 `大括号` 括住这些字符：
 
-> 发送加号 `+`，用 `WshShell.SendKeys "{+}"`。
+> 发送加号 `+`​，用 `WshShell.SendKeys "{+}"`。
 
 对于一些不会生成字符的控制功能按键，也同样需要使用大括号括起来按键的名称。  
 如果发送是基本字符用 `“”` 括起来：
 
-> 发送 `回车键`，用 `WshShell.SendKeys "{ENTER}"`  
-> 发送 `向下的方向键`，用 `WshShell.SendKeys "{DOWN}"`​
+> 发送 `回车键`​，用 `WshShell.SendKeys "{ENTER}"`​  
+> 发送 `向下的方向键`​，用 `WshShell.SendKeys "{DOWN}"`
 
 **3. 组合键**
 
-发送 `Ctrl + Shift + ESC`，用 `WshShell.SendKeys "^+{ESC}"`。
+发送 `Ctrl + Shift + ESC`​，用 `WshShell.SendKeys "^+{ESC}"`。
 
 **4. 发送多个重复的单字母按键**
 
 不必重复输入该字母，SendKeys 允许使用简化格式进行描述。  
-使用格式：`{按键 数字}`​
+使用格式：`{按键 数字}`
 
-> 发送 10 个字母 `X`，用 `WshShell.SendKeys "{X 10}"`。
+> 发送 10 个字母 `X`​，用 `WshShell.SendKeys "{X 10}"`。
 
 **5. 列表**
 

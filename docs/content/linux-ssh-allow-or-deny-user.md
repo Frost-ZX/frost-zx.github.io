@@ -1,5 +1,5 @@
 ---
-title: Linux 允许或禁止指定用户进行 SSH 登录
+title: "Linux 允许或禁止指定用户进行 SSH 登录"
 date: 2025-03-16T16:04:28Z
 lastmod: 2025-03-16T16:06:51Z
 tags: [Linux,SSH,配置]
@@ -14,9 +14,9 @@ tags: [Linux,SSH,配置]
 
 ## 允许指定用户登录（白名单）
 
-在 sshd 的配置文件 `/etc/ssh/sshd_config` 中添加 `AllowUsers` 项，其后方跟随以空格分隔的用户名 PATTERN 列表。
+在 sshd 的配置文件 `/etc/ssh/sshd_config`​ 中添加 `AllowUsers` 项，其后方跟随以空格分隔的用户名 PATTERN 列表。
 
-例如允许 `test-a` 用户和从 `192.168.1.100` 登录的 `test-b` 用户：
+例如允许 `test-a`​ 用户和从 `192.168.1.100`​ 登录的 `test-b` 用户：
 
 ```plaintext
 AllowUsers test-a test-b@192.168.1.100
@@ -38,9 +38,9 @@ AllowUsers test-a test-b@192.168.1.100
 
 ## 禁止指定用户登录（黑名单）
 
-在 sshd 的配置文件 `/etc/ssh/sshd_config` 中添加 `DenyUsers` 项，，其后方跟随以空格分隔的用户名 PATTERN 列表。
+在 sshd 的配置文件 `/etc/ssh/sshd_config`​ 中添加 `DenyUsers` 项，，其后方跟随以空格分隔的用户名 PATTERN 列表。
 
-例如禁止 `test-c` 用户和从 `192.168.1.100` 登录的 `test-d` 用户：
+例如禁止 `test-c`​ 用户和从 `192.168.1.100`​ 登录的 `test-d` 用户：
 
 ```plaintext
 DenyUsers test-c test-d@192.168.1.100
@@ -64,7 +64,7 @@ DenyUsers test-c test-d@192.168.1.100
 
 一个 PATTERN 由零个或多个非空白字符以及“\*”（匹配零个或多个字符的通配符）或“?”（仅匹配一个字符的通配符）组成。
 
-例如匹配主机 `192.168.0.0` \~ `192.168.0.9`，可以使用：
+例如匹配主机 `192.168.0.0`​ \~ `192.168.0.9`，可以使用：
 
 ```plaintext
 192.168.0.?
@@ -91,7 +91,7 @@ For example, to allow a key to be used from anywhere within an organisation exce
 
 ## 注意
 
-- 配置完成后需要重启 `sshd` 服务（例如 `service sshd restart`）。
-- 配置的 allow / deny 指令按照此顺序进行处理：`DenyUsers -> AllowUsers -> DenyGroups -> AllowGroups`​
+- 配置完成后需要重启 `sshd`​ 服务（例如 `service sshd restart`）。
+- 配置的 allow / deny 指令按照此顺序进行处理：`DenyUsers -> AllowUsers -> DenyGroups -> AllowGroups`
 
 ‍

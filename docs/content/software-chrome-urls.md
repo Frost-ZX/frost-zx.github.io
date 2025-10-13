@@ -1,5 +1,5 @@
 ---
-title: Chrome URLs 列表（List of Chrome URLs）
+title: "Chrome URLs 列表（List of Chrome URLs）"
 date: 2025-03-16T22:14:24Z
 lastmod: 2025-03-16T22:17:01Z
 tags: [软件,Chrome,Chromium,链接]
@@ -15,7 +15,7 @@ tags: [软件,Chrome,Chromium,链接]
 
 - **chrome://about**  
 
-  进入 `chrome://chrome-urls`​
+  进入 `chrome://chrome-urls`
 - **chrome://accessibility**
 - **chrome://appcache-internals**  
 
@@ -99,7 +99,7 @@ tags: [软件,Chrome,Chromium,链接]
 - **chrome://offline-internals**
 - **chrome://omnibox**  
 
-  调试 `智能地址栏`​
+  调试 `智能地址栏`
 - **chrome://password-manager-internals**
 - **chrome://plugins/**   
 

@@ -1,5 +1,5 @@
 ---
-title: 「Web 前端」Vue CLI 配置 Less 全局变量
+title: "「Web 前端」Vue CLI 配置 Less 全局变量"
 date: 2025-03-15T23:16:58Z
 lastmod: 2025-03-15T23:19:03Z
 tags: [Web 前端,Vue.js,Vue CLI,JavaScript,教程]
@@ -18,7 +18,7 @@ tags: [Web 前端,Vue.js,Vue CLI,JavaScript,教程]
 
     > 安装依赖和修改 `vue.config.js` 需要重新启动项目以生效。
     >
-2. 安装 `less` 和 `less-loader`。
+2. 安装 `less`​ 和 `less-loader`。
 
     > 若已安装则可忽略（例如使用 Vue CLI 创建项目时选择了 Less CSS 预处理器）。
     >
@@ -38,7 +38,7 @@ tags: [Web 前端,Vue.js,Vue CLI,JavaScript,教程]
     ```
 2. 修改项目根目录下的 `vue.config.js` 文件（若无则创建）。
 
-    > 以使用 `src/assets/css/global.less` 和 `src/assets/css/variables.less` 文件为例。
+    > 以使用 `src/assets/css/global.less`​ 和 `src/assets/css/variables.less` 文件为例。
     >
 
     ```javascript
@@ -90,7 +90,7 @@ tags: [Web 前端,Vue.js,Vue CLI,JavaScript,教程]
     ```
 2. 根据需要修改 `vue.config.js` 文件。
 
-    > 以使用 `src/assets/css/global.less` 和 `src/assets/css/variables.less` 文件为例。
+    > 以使用 `src/assets/css/global.less`​ 和 `src/assets/css/variables.less` 文件为例。
     >
 
     ```javascript

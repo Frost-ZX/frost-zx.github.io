@@ -1,5 +1,5 @@
 ---
-title: 使用 VSCode 查看和编辑 Minecraft 存档的 NBT
+title: "使用 VSCode 查看和编辑 Minecraft 存档的 NBT"
 date: 2025-03-15T22:16:38Z
 lastmod: 2025-03-15T22:22:27Z
 tags: [Minecraft,教程,工具,VSCode,NBT]
@@ -21,7 +21,7 @@ tags: [Minecraft,教程,工具,VSCode,NBT]
     >
 
     ![image](assets/network-asset-vscode-download-1-20250315221732-pbbk9r2.png)  
-    本文中以 Windows 平台 `System Installer` `x64` 为例。  
+    本文中以 Windows 平台 `System Installer`​ `x64`​ 为例。  
     ​![image](assets/network-asset-vscode-download-2-20250315221732-ydvbqhq.png)  
     若有需要，可以访问 “[Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)” 页面查看安装说明文档（英文）：  
     ​![image](assets/network-asset-vscode-setup-doc-20250315221732-5nop15f.png)
@@ -42,9 +42,9 @@ tags: [Minecraft,教程,工具,VSCode,NBT]
 
 ---
 
-若有需要，可以按下 `Ctrl + Shift + P` 或 `F1`，输入 “display language”，选择 “Configure Display Language”，然后选择安装所需的语言包。
+若有需要，可以按下 `Ctrl + Shift + P`​ 或 `F1`，输入 “display language”，选择 “Configure Display Language”，然后选择安装所需的语言包。
 
-> 注：使用 `↑` `↓` 键切换选项，按下 `Enter` 键进行确认。
+> 注：使用 `↑`​ `↓`​ 键切换选项，按下 `Enter` 键进行确认。
 
 ![image](assets/network-asset-vscode-configure-display-language-20250315221734-iudmfwz.png)
 
@@ -86,9 +86,9 @@ tags: [Minecraft,教程,工具,VSCode,NBT]
 
 ---
 
-若有需要，可以按下 `Ctrl + Shift + P` 或 `F1`，输入 “workspace trust”，选择 “Manage Workspace Trust”，查看工作区信任配置情况。
+若有需要，可以按下 `Ctrl + Shift + P`​ 或 `F1`，输入 “workspace trust”，选择 “Manage Workspace Trust”，查看工作区信任配置情况。
 
-> 注：使用 `↑` `↓` 键切换选项，按下 `Enter` 键进行确认。
+> 注：使用 `↑`​ `↓`​ 键切换选项，按下 `Enter` 键进行确认。
 
 ![image](assets/network-asset-vscode-manage-workspace-trust-1-20250315221735-kinmnr6.png)
 
@@ -142,7 +142,7 @@ tags: [Minecraft,教程,工具,VSCode,NBT]
     ​![image](assets/network-asset-faq-installer-download-slow-2-20250315221737-qb1gq9i.png)
 3. 打开浏览器的 “下载” 页面，复制安装包的下载链接。  
     ​![image](assets/network-asset-faq-installer-download-slow-3-20250315221737-zgc931w.png)
-4. 将下载地址中的 `az764295.vo.msecnd.net` 部分替换为 `vscode.cdn.azure.cn`，填入到浏览器的地址栏中访问，以通过国内的镜像服务器进行下载。  
+4. 将下载地址中的 `az764295.vo.msecnd.net`​ 部分替换为 `vscode.cdn.azure.cn`​，填入到浏览器的地址栏中访问，以通过国内的镜像服务器进行下载。  
     ​![image](assets/network-asset-faq-installer-download-slow-4-20250315221737-y875dvj.png)  
     ​![image](assets/network-asset-faq-installer-download-slow-5-20250315221737-ngc984s.png)
 

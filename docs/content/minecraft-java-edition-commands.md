@@ -1,5 +1,5 @@
 ---
-title: Minecraft Java Edition 命令合集
+title: "Minecraft Java Edition 命令合集"
 date: 2025-03-16T22:24:06Z
 lastmod: 2025-03-16T22:26:03Z
 tags: [Minecraft,合集,命令,命令方块]
@@ -13,7 +13,7 @@ tags: [Minecraft,合集,命令,命令方块]
 
 ---
 
-> 如无特殊情况，本文中的 `目标选择器` 均使用 `r=半径` 作为说明，可根据需要自行修改。
+> 如无特殊情况，本文中的 `目标选择器`​ 均使用 `r=半径` 作为说明，可根据需要自行修改。
 >
 > **安全起见，最好先**  **​`/testfor`​**​ **一下设定的** **​`目标选择器`​**​ **是否正确选择了所需要修改的** **​`实体`​**​ **。**
 
@@ -29,16 +29,16 @@ tags: [Minecraft,合集,命令,命令方块]
 
 打开或关闭 `半径` 范围内的生物的 AI（已测试：1.10.2、1.12.2）
 
-- 打开（默认状态）：`/entitydata @e[r=半径] {NoAI:0}`​
-- 关闭：`/entitydata @e[r=半径] {NoAI:1}`​
+- 打开（默认状态）：`/entitydata @e[r=半径] {NoAI:0}`
+- 关闭：`/entitydata @e[r=半径] {NoAI:1}`
 
-更改 `半径` 范围内的 `自定义 NPC` 的 `玩家材质 ID` 为 `游戏 ID`（已测试：1.10.2）
+更改 `半径`​ 范围内的 `自定义 NPC`​ 的 `玩家材质 ID`​ 为 `游戏 ID`（已测试：1.10.2）
 
 ```text
 /entitydata @e[r=半径,type=customnpcs.CustomNpc] {SkinUsername:{Name:"游戏 ID"}}
 ```
 
-使 `半径` 范围内的 `RailCraft 永动机车` 的旋转角度变为 `角度`​
+使 `半径`​ 范围内的 `RailCraft 永动机车`​ 的旋转角度变为 `角度`
 
 ```text
 已测试：1.10.2
@@ -50,25 +50,25 @@ tags: [Minecraft,合集,命令,命令方块]
 可用的“角度”：0.0f 90.0f 180.0f 270.0f
 ```
 
-使 `半径` 范围内的 `RailCraft 永动机车` 锁定（私人模式）（已测试：1.10.2）
+使 `半径`​ 范围内的 `RailCraft 永动机车` 锁定（私人模式）（已测试：1.10.2）
 
 ```text
 /entitydata @e[r=半径,type=railcraft.locomotive_creative] {lock:"PRIVATE"}
 ```
 
-使 `半径` 范围内的 `RailCraft 永动机车` 启动（已测试：1.10.2）
+使 `半径`​ 范围内的 `RailCraft 永动机车` 启动（已测试：1.10.2）
 
 ```text
 /entitydata @e[r=半径,type=railcraft.locomotive_creative] {locoMode:2b}
 ```
 
-使 `半径` 范围内的 `RailCraft 永动机车` 停止（已测试：1.10.2）
+使 `半径`​ 范围内的 `RailCraft 永动机车` 停止（已测试：1.10.2）
 
 ```text
 /entitydata @e[r=半径,type=railcraft.locomotive_creative] {locoMode:0b}
 ```
 
-使 `半径` 范围内的 `矿车` 内显示方块 ID 为 `ID:数据值` 的方块
+使 `半径`​ 范围内的 `矿车`​ 内显示方块 ID 为 `ID:数据值` 的方块
 
 ```text
 已测试：1.10.2
@@ -78,13 +78,13 @@ tags: [Minecraft,合集,命令,命令方块]
 /entitydata @e[r=半径,type=minecart] {CustomDisplayTile:1b,DisplayTile:"ID",DisplayData:数据值,DisplayOffset:方块垂直位移}
 ```
 
-使 `半径` 范围内的 `生物` 无敌（已测试：1.10.2）
+使 `半径`​ 范围内的 `生物` 无敌（已测试：1.10.2）
 
 ```text
 /entitydata @e[r=半径] {Invulnerable:1b}
 ```
 
-使 `半径` 范围内的 `物品` 无法被捡起 & 消失
+使 `半径`​ 范围内的 `物品` 无法被捡起 & 消失
 
 ```text
 已测试：1.10.2 Sponge 服务端
@@ -121,19 +121,19 @@ tags: [Minecraft,合集,命令,命令方块]
 
 ## /summom
 
-在 `原地` 生成半径为 `半径` ，时长为 `游戏刻` 的 `伤害 II` 的药水云（已测试：1.10.2）
+在 `原地`​ 生成半径为 `半径`​ ，时长为 `游戏刻`​ 的 `伤害 II` 的药水云（已测试：1.10.2）
 
 ```text
 /summon AreaEffectCloud ~ ~ ~ {Age:0,Duration:游戏刻,ReapplicationDelay:20,WaitTime:20,DurationOnUse:0,Radius:半径f,RadiusPerTick:0.0001f,RadiusOnUse:0.0f,Particle:flame,Effects:[{Ambient:0b,Amplifier:1b,Id:7b,ShowParticles:1b,Duration:1}]}
 ```
 
-在 `原地` 生成名称为 `ID` 且 `无敌` 的临时 NPC（已测试：1.10.2 Sponge 服务端）
+在 `原地`​ 生成名称为 `ID`​ 且 `无敌` 的临时 NPC（已测试：1.10.2 Sponge 服务端）
 
 ```text
 /summon Sponge.Human ~ ~ ~ {Invulnerable:1b,CustomName:"ID"}
 ```
 
-在 `原地` 生成一辆内部显示方块 ID 为 `ID:数据值` 的方块的矿车
+在 `原地`​ 生成一辆内部显示方块 ID 为 `ID:数据值` 的方块的矿车
 
 ```text
 已测试：1.10.2
@@ -143,7 +143,7 @@ tags: [Minecraft,合集,命令,命令方块]
 /summon minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayTile:"ID",DisplayData:数据值,DisplayOffset:方块垂直位移}
 ```
 
-在 `原地` 生成方块 ID 为 `ID:数据值` 的浮空方块（已测试：1.12.2）
+在 `原地`​ 生成方块 ID 为 `ID:数据值` 的浮空方块（已测试：1.12.2）
 
 ```text
 /summon falling_block X Y Z {Block:"ID",Data:数据值b,Time:1,NoGravity:1b,UpdateBlocked:1b,CustomName:"名称"}
@@ -151,18 +151,18 @@ tags: [Minecraft,合集,命令,命令方块]
 
 ## /testfor
 
-检测半径为 `半径` 的玩家手上是否 `持有` 相应 `物品 ID` 的物品（已测试：1.10.2）
+检测半径为 `半径`​ 的玩家手上是否 `持有`​ 相应 `物品 ID` 的物品（已测试：1.10.2）
 
 ```text
 /testfor @a[r=半径] {SelectedItem:{id:物品 ID}}
 ```
 
-> 检测的不一定是 `物品`，也可以是 `方块`、`装备` 等等，也支持检测模组中的物品。
+> 检测的不一定是 `物品`​，也可以是 `方块`​、`装备` 等等，也支持检测模组中的物品。
 >
 > 例：
 >
-> ​`/testfor @a[r=5] {SelectedItem:{id:minecraft:stone}}`​
+> ​`/testfor @a[r=5] {SelectedItem:{id:minecraft:stone}}`
 >
-> ​`/testfor @a[r=16] {SelectedItem:{id:wheat_plus:MaiZiTong}}`​
+> ​`/testfor @a[r=16] {SelectedItem:{id:wheat_plus:MaiZiTong}}`
 
 ‍

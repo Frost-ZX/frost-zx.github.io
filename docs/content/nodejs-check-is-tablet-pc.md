@@ -1,5 +1,5 @@
 ---
-title: Electron 或 Node.js 判断当前设备是否支持触摸屏
+title: "Electron 或 Node.js 判断当前设备是否支持触摸屏"
 date: 2025-02-11T20:55:18Z
 lastmod: 2025-02-20T22:57:46Z
 tags: [JavaScript,Node.js,Electron,Web 前端]
@@ -9,7 +9,7 @@ tags: [JavaScript,Node.js,Electron,Web 前端]
 
 在 Windows 系统上，可以通过注册表项 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Tablet PC\IsTabletPC` 获取当前设备是否支持触摸屏。
 
-若 `IsTabletPC` 的值大于 `0`，则表示支持触摸屏。
+若 `IsTabletPC`​ 的值大于 `0`，则表示支持触摸屏。
 
 ![](assets/network-asset-3280690-20231218143106045-884789034-20250212095032-064mwnt.png)
 

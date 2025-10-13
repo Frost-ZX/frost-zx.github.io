@@ -1,5 +1,5 @@
 ---
-title: 使用 gooreplacer 插件解决国内在 Minecraft 官网不能登录的问题
+title: "使用 gooreplacer 插件解决国内在 Minecraft 官网不能登录的问题"
 date: 2025-03-16T18:45:10Z
 lastmod: 2025-03-16T18:53:44Z
 tags: [Minecraft,教程,浏览器,插件]
@@ -31,7 +31,7 @@ tags: [Minecraft,教程,浏览器,插件]
 
 Minecraft 国际版官网启用了 reCAPTCHA 验证码，由于其使用了 google.com 的域名，在中国大陆不能正常加载，导致点击“登录”按钮后没有任何的反应。
 
-本方法通过扩展程序把 `www.google.com/recaptcha` 重定向为 `recaptcha.net/recaptcha`，使 Minecraft 国际版官网上的 reCAPTCHA 能正常加载以登录。
+本方法通过扩展程序把 `www.google.com/recaptcha`​ 重定向为 `recaptcha.net/recaptcha`，使 Minecraft 国际版官网上的 reCAPTCHA 能正常加载以登录。
 
 ## 安装扩展程序
 
@@ -46,9 +46,9 @@ Minecraft 国际版官网启用了 reCAPTCHA 验证码，由于其使用了 goog
 由于 Chrome 网上应用商店使用了 google.com 的域名，所以一般情况下，在中国大陆也是不能访问的，你可能要通过以下的方法安装 gooreplacer 扩展程序（如果你使用的是 Firefox 浏览器，则可以直接安装）。
 
 1. 进入 gooreplacer 扩展程序的 [GitHub 仓库](#20250316184740-67klq0m) 页面。
-2. 在 `安装` 部分找到 `此外，也可以直接下载本仓库的 crx 文件` ，点击 [crx 文件](https://github.com/jiacai2050/gooreplacer/blob/master/gooreplacer.crx) 字段，然后在打开的页面中点击 [Download](https://github.com/jiacai2050/gooreplacer/raw/master/gooreplacer.crx) 即可下载扩展程序文件（当然，你也可以直接点击这里的 `Download` 进行下载）。  
+2. 在 `安装`​ 部分找到 `此外，也可以直接下载本仓库的 crx 文件`​ ，点击 [crx 文件](https://github.com/jiacai2050/gooreplacer/blob/master/gooreplacer.crx) 字段，然后在打开的页面中点击 [Download](https://github.com/jiacai2050/gooreplacer/raw/master/gooreplacer.crx) 即可下载扩展程序文件（当然，你也可以直接点击这里的 `Download`​ 进行下载）。  
     ​![Download CRX](assets/network-asset-download-crx-20250316184540-c6u4bof.png)
-3. 在 Chrome 中打开 `chrome://extensions/`，然后把刚刚下载的 `gooreplacer.crx` 文件拖到页面中，等待一会就会弹出确认安装提示框，点击“添加扩展程序”然后稍等片刻就安装完成了。
+3. 在 Chrome 中打开 `chrome://extensions/`​，然后把刚刚下载的 `gooreplacer.crx` 文件拖到页面中，等待一会就会弹出确认安装提示框，点击“添加扩展程序”然后稍等片刻就安装完成了。
 
 ## 配置扩展程序
 

@@ -1,5 +1,5 @@
 ---
-title: 临时设置 Java 环境变量（PATH）
+title: "临时设置 Java 环境变量（PATH）"
 date: 2025-03-16T16:09:15Z
 lastmod: 2025-03-16T16:10:28Z
 tags: [Linux,Windows,命令,命令提示符,Java,终端]

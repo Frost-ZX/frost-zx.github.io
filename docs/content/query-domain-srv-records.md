@@ -1,5 +1,5 @@
 ---
-title: 在 Linux  Windows 查询域名的 SRV 记录
+title: "在 Linux  Windows 查询域名的 SRV 记录"
 date: 2025-03-16T16:03:27Z
 lastmod: 2025-03-16T16:03:47Z
 tags: [Windows,Linux,域名,命令]

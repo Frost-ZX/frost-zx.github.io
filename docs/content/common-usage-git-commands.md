@@ -1,5 +1,5 @@
 ---
-title: 常用的 Git 命令
+title: "常用的 Git 命令"
 date: 2025-02-11T20:43:29Z
 lastmod: 2025-02-20T22:59:20Z
 tags: [Git,命令,开发]
@@ -43,13 +43,13 @@ git config --global commit.gpgsign true
 
 ### 单行显示
 
-​`git log --oneline`​
+​`git log --oneline`
 
 把每一条提交压缩到只有一行，仅保留短哈希、提价说明等最必要的信息，以一种更干净的方式查看提交。
 
 ### 显示差异
 
-​`git log -p`​
+​`git log -p`
 
 展示带有改动内容的历史，可以看到每条提交都改动了哪些内容。
 
@@ -65,7 +65,7 @@ Git 会使用正则来进行筛选和过滤，因此非准确的名字或大小�
 
 ### 按时间过滤
 
-添加参数 `--after` 和 `--before` 以按时间过滤。
+添加参数 `--after`​ 和 `--before` 以按时间过滤。
 
 2021-01-01 之后：
 
@@ -318,7 +318,7 @@ git gc --aggressive --prune=now
     ```text
     git rebase e2394c2^ --interactive
     ```
-3. 在打开的编辑界面中将需要修改的提交前的 `pick` 改为 `edit`，然后保存退出。
+3. 在打开的编辑界面中将需要修改的提交前的 `pick`​ 改为 `edit`，然后保存退出。
 4. 修改文件，然后重新提交。
 
     ```text
@@ -327,7 +327,7 @@ git gc --aggressive --prune=now
     ```
 
     注意：提交使用的参数是 `--amend`。
-5. 执行 `git rebase --continue` 命令逐步前进到最新的提交位置。  
+5. 执行 `git rebase --continue`​ 命令逐步前进到最新的提交位置。  
     注意：修改文件后可能会产生冲突，解决冲突并提交后需要再次执行 `git rebase --continue` 命令以继续。
 6. 提交到远程：
 

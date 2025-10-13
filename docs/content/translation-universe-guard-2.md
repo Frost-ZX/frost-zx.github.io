@@ -1,5 +1,5 @@
 ---
-title: 「Minecraft」UniverseGuard 2 插件部分提示文本汉化
+title: "「Minecraft」UniverseGuard 2 插件部分提示文本汉化"
 date: 2025-03-16T19:06:28Z
 lastmod: 2025-03-16T19:07:34Z
 tags: [Minecraft,翻译,插件]

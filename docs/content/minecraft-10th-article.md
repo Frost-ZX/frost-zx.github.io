@@ -1,5 +1,5 @@
 ---
-title: Minecraft 十周年，感谢有你
+title: "Minecraft 十周年，感谢有你"
 date: 2025-03-17T00:16:19Z
 lastmod: 2025-03-17T00:18:27Z
 tags: [Minecraft,周年]
@@ -9,7 +9,7 @@ tags: [Minecraft,周年]
 
 不知不觉，距离 Minecraft 首个公开版本的发布日（2009 年 5 月 13 日）已经有 10 年了，Minecraft 十周年（2019年5月17日）即将到来，我接触 Minecraft 这款游戏也将近有 7 年了。十年以来，Minecraft 带给了我们很多的欢笑、回忆和感动。
 
-![](assets/network-asset-fab82a145ddc0d2bad0be84a73556a5756283b18-20250317001907-1mf9fwp.gif "https://www.minecraft.net/zh-hans/10th-anniversary")​
+![](assets/network-asset-fab82a145ddc0d2bad0be84a73556a5756283b18-20250317001907-1mf9fwp.gif "https://www.minecraft.net/zh-hans/10th-anniversary")
 
 还记得，初次接触 Minecraft 是在 2012 年的暑假。那天在网上寻找游戏，然后无意中看到了 Minecraft，那时候的版本是 1.2.5。我被其独特的画风（方块、像素）吸引了，就下载来玩了。
 

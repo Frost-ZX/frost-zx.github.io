@@ -1,5 +1,5 @@
 ---
-title: 「Web 前端」通过 iframe 实现 form 表单提交不跳转页面
+title: "「Web 前端」通过 iframe 实现 form 表单提交不跳转页面"
 date: 2025-03-15T22:49:42Z
 lastmod: 2025-03-15T22:50:25Z
 tags: [Web 前端,HTML5,代码片段]
@@ -13,7 +13,7 @@ tags: [Web 前端,HTML5,代码片段]
 
 ## 示例代码
 
-可以通过 `form` 的 `target` 属性指定在提交表单之后，在哪里显示响应信息：
+可以通过 `form`​ 的 `target` 属性指定在提交表单之后，在哪里显示响应信息：
 
 ```html
 <form action="example.php" method="post" target="result_element">
@@ -26,7 +26,7 @@ tags: [Web 前端,HTML5,代码片段]
 
 ## 注意事项
 
-- ​`form` 元素中的 `target` 属性值需要对应目标 `iframe` 元素的 `name` 属性值。
-- ​`iframe` 元素可以放到 `body` 中的任意位置。
+- ​`form`​ 元素中的 `target`​ 属性值需要对应目标 `iframe`​ 元素的 `name` 属性值。
+- ​`iframe`​ 元素可以放到 `body` 中的任意位置。
 
 ‍

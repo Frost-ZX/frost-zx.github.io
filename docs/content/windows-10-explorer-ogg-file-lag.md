@@ -1,5 +1,5 @@
 ---
-title: 解决 Windows 10 资源管理器操作 OGG 文件时未响应的问题
+title: "解决 Windows 10 资源管理器操作 OGG 文件时未响应的问题"
 date: 2025-03-16T16:27:26Z
 lastmod: 2025-03-16T16:28:19Z
 tags: [Windows,资源管理器,卡顿,文件,未响应]
@@ -35,7 +35,7 @@ tags: [Windows,资源管理器,卡顿,文件,未响应]
 
 ![](assets/network-asset-01_3-20250316162752-tj2hi4r.png)
 
-若不需要使用，可在 `Windows 设置 - 应用 - 应用和功能` 将其卸载，即可解决 OGG 文件导致资源管理器 `未响应` 的问题。
+若不需要使用，可在 `Windows 设置 - 应用 - 应用和功能`​ 将其卸载，即可解决 OGG 文件导致资源管理器 `未响应` 的问题。
 
 ![](assets/network-asset-02-20250316162752-ng03hvu.png)
 

@@ -1,5 +1,5 @@
 ---
-title: Nginx 常用配置文件片段
+title: "Nginx 常用配置文件片段"
 date: 2025-03-15T22:57:21Z
 lastmod: 2025-03-15T22:59:02Z
 tags: [配置,Nginx,服务器,网站]
@@ -116,7 +116,7 @@ server {
 
 注意：只有 OpenSSL 1.0.2 及以上版本支持
 
-将 `ssl_certificate` 和 `ssl_certificate_key`，复制多一份，然后把路径修改为其他类型证书的路径：
+将 `ssl_certificate`​ 和 `ssl_certificate_key`，复制多一份，然后把路径修改为其他类型证书的路径：
 
 ```nginx
 server {

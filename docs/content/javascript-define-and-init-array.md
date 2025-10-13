@@ -1,5 +1,5 @@
 ---
-title: JavaScript 创建并初始化任意长度的数组
+title: "JavaScript 创建并初始化任意长度的数组"
 date: 2025-02-11T20:45:30Z
 lastmod: 2025-02-20T22:59:05Z
 tags: [JavaScript,Web 前端]
@@ -44,7 +44,7 @@ var arr = [...new Array(5).keys()]; // [0, 1, 2, 3, 4]
 
 ## 使用 Array.from()
 
-> ​`Array.from(arrayLike[, mapFn[, thisArg]])`​
+> ​`Array.from(arrayLike[, mapFn[, thisArg]])`
 
 ```javascript
 var arr = Array.from({length: 5}); // [undefined x 5]

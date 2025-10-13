@@ -1,5 +1,5 @@
 ---
-title: 「优化」使你的 Minecraft 玩起来更流畅
+title: "「优化」使你的 Minecraft 玩起来更流畅"
 date: 2025-02-15T19:17:41Z
 lastmod: 2025-02-20T23:04:13Z
 tags: [游戏,Minecraft,教程,优化]
@@ -46,14 +46,14 @@ Java 分 32 位和 64 位版本，如果你的系统是 64 位，就安装 64 �
 
 ## 方法五：给 Java 分配更多的内存展开目录
 
-本方法以正版启动器为例，其他的第三方启动器通常能在`启动器设置`找到内存分配设置选项。  
-**注意：内存只能分配** **​`小于`​** **当前系统剩余内存的大小。**
+本方法以正版启动器为例，其他的第三方启动器通常能在`启动器设置`​找到内存分配设置选项。  
+**注意：内存只能分配** **​`小于`​**​ **当前系统剩余内存的大小。**
 
 #### 步骤展开目录
 
-1. 点击启动器左下角的 `Edit Profile` 按钮：  
+1. 点击启动器左下角的 `Edit Profile`​ 按钮：  
     ​![Edit Profile](assets/network-asset-728d23a7gw1f7c6gpkf2uj206t02eq2q-20250215192022-mhqzu1n.jpg "Edit Profile")
-2. 勾选 `JVM Arguments` 后，即可修改内容：  
+2. 勾选 `JVM Arguments`​ 后，即可修改内容：  
     ​![JVM Arguments](assets/network-asset-728d23a7gw1f7c6grxp6ej20jf02pt8t-20250215192023-q393aq2.jpg "JVM Arguments")
 3. 修改完成后，保存即可：  
     ​![Save Profile](assets/network-asset-728d23a7gw1f7c6guubkij207401m742-20250215192025-ikuc9bb.jpg "Save Profile")
@@ -82,7 +82,7 @@ Optifine 是一个优化 Minecraft 的 MOD（模组），它提供了非常实�
 
 ![设置](assets/network-asset-728d23a7gw1f7c6gb146rj208y01qjr9-20250215192026-v5h81f5.jpg "设置")
 
-把 `图像品质` 设置为 `流畅`（视频设置）
+把 `图像品质`​ 设置为 `流畅`（视频设置）
 
 ![设置](assets/network-asset-728d23a7gw1f7c6gigwd8j208y01qwed-20250215192027-tlsnvyt.jpg "设置")
 
