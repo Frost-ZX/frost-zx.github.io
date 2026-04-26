@@ -3,6 +3,12 @@ export const siteLinksOnline = [
 
   // 博客
   {
+    siteTitle: 'AurLemon Intro',
+    siteDesc: 'AurLemon 的个人介绍站。',
+    siteUrl: 'https://aurlemon.top/',
+    iconUrl: 'https://aurlemon.top/favicon.ico',
+  },
+  {
     siteTitle: 'DSRBLOG',
     siteDesc: 'blog.dsrkafuu.net',
     siteUrl: 'https://blog.dsrkafuu.net/',
@@ -114,12 +120,6 @@ export const siteLinksOffline = [
     siteDesc: '4ssh.cn',
     siteUrl: 'https://4ssh.cn/',
     iconUrl: '',
-  },
-  {
-    siteTitle: 'AurLemon Blog',
-    siteDesc: 'Aurora_Lemon 的个人博客，记录个人感想、生活、记录。',
-    siteUrl: 'https://blog.aurlemon.top/',
-    iconUrl: 'https://blog.aurlemon.top/favicon.ico',
   },
   {
     siteTitle: 'LuRenDing',
