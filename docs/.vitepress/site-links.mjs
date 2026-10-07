@@ -82,7 +82,7 @@ export const siteLinksOnline = [
     siteTitle: '王鑫的小站',
     siteDesc: '活着就是为了折腾！',
     siteUrl: 'https://wxweb.xyz/',
-    iconUrl: 'https://pic.wxweb.xyz/pic/favicon.ico',
+    iconUrl: 'https://pic.wxweb.xyz/main.jpg',
     isGlobal: false,
   },
   {
